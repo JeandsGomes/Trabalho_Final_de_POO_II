@@ -10,12 +10,6 @@
     <height>400</height>
    </rect>
   </property>
-  <property name="minimumSize">
-   <size>
-    <width>300</width>
-    <height>400</height>
-   </size>
-  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -40,15 +34,18 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QFrame" name="frame_transf_cabecalho">
+     <widget class="QFrame" name="frame_saque_cabecalho">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
         <width>16777215</width>
         <height>100</height>
        </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -56,9 +53,24 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
+       <property name="topMargin">
+        <number>9</number>
+       </property>
+       <property name="rightMargin">
+        <number>9</number>
+       </property>
+       <property name="bottomMargin">
+        <number>9</number>
+       </property>
        <item>
-        <widget class="QPushButton" name="pushButton_transf_voltar_menu">
+        <widget class="QPushButton" name="pushButton_saque_voltar_menu">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -97,7 +109,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_transf_cabecalho">
+        <widget class="QLabel" name="label_saque_string">
          <property name="font">
           <font>
            <family>Rubik</family>
@@ -111,7 +123,7 @@
          </property>
          <property name="text">
           <string>Qual é o valor da
-transferência ?</string>
+saque ?</string>
          </property>
         </widget>
        </item>
@@ -119,24 +131,18 @@ transferência ?</string>
      </widget>
     </item>
     <item>
-     <widget class="QFrame" name="frame_trsf_info_valor">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>16777215</height>
-       </size>
-      </property>
+     <widget class="QFrame" name="frame_saque_info">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="QLabel" name="label_transfe_rs">
+          <widget class="QLabel" name="label_saque_rs">
            <property name="font">
             <font>
              <family>Rubik</family>
@@ -151,7 +157,7 @@ transferência ?</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_transf_valor">
+          <widget class="QLineEdit" name="lineEdit_saque_valor">
            <property name="font">
             <font>
              <family>Rubik</family>
@@ -169,9 +175,6 @@ transferência ?</string>
 
 }</string>
            </property>
-           <property name="text">
-            <string/>
-           </property>
           </widget>
          </item>
         </layout>
@@ -180,80 +183,16 @@ transferência ?</string>
      </widget>
     </item>
     <item>
-     <widget class="QFrame" name="frame_transf_cabecalho_cpf">
+     <widget class="QFrame" name="frame_saque_butao">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QLabel" name="label_">
-         <property name="font">
-          <font>
-           <family>Rubik</family>
-           <pointsize>14</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>CPF da conta que deseja
-transferir ?</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="frame_trsnf_info">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QLineEdit" name="lineEdit_trnsf_cpf">
-         <property name="font">
-          <font>
-           <family>Rubik</family>
-           <pointsize>11</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLineEdit{
-	background:transparent;
-	border:none;
-	color:rgb(45,45,45);
-	border-bottom: 2px solid rgb(115,115,115);
-
-}</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="frame_transf_butoes">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QPushButton" name="pushButton_trnsf_transferir">
+        <widget class="QPushButton" name="pushButton_saque_sacar">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -284,7 +223,7 @@ QPushButton:pressed{
 </string>
          </property>
          <property name="text">
-          <string>Transferir</string>
+          <string>Sacar</string>
          </property>
         </widget>
        </item>
@@ -293,7 +232,6 @@ QPushButton:pressed{
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

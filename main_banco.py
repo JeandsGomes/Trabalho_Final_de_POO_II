@@ -189,7 +189,7 @@ class Main(QMainWindow,Ui_Main):
                 if(self.contaLogada.depositar(float(valor))):
                     QMessageBox.information(None, 'Deposito', 'Deposito realizado!')
                 else:
-                    QMessageBox.information(None, 'Deposito', 'Deposito não realizado!')
+                    QMessageBox.information(None, 'Deposito', 'Deposito não realizado,\n limite ultrapassado!')
 
             except:
                 QMessageBox.information(None, 'Deposito', 'Apenas digitos!')

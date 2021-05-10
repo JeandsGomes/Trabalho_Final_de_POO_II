@@ -93,8 +93,12 @@ class Banco():
         self._limite = valor
 
     def depositar(self,valor):
-        self._saldo += valor
-        self._historico.transacoes.append("deposito de {}".format(valor))
+        if (self.saldo+valor > self.limite):
+            return False
+        else:
+            self._saldo += valor
+            self._historico.transacoes.append("deposito de {}".format(valor))
+            return True
     
     @property
     def titular(self):

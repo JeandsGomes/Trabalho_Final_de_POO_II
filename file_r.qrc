@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>New_Piskel_(5).png</file>
     <file>New Piskel (5).png</file>
   </qresource>
 </RCC>

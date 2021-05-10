@@ -11,6 +11,7 @@ from tela_menu import Tela_menu
 from tela_saque import Tela_saque
 from tela_transfere2 import Tela_transfere
 from tela_cadastro import Tela_cadastro
+from tela_historico import Tela_historico
 
 from cadastro import Cadastro
 from Banco import Banco,Cliente
@@ -29,6 +30,7 @@ class Ui_Main(QtWidgets.QWidget):
         self.stack3=QtWidgets.QMainWindow()
         self.stack4=QtWidgets.QMainWindow()
         self.stack5=QtWidgets.QMainWindow()
+        self.stack6=QtWidgets.QMainWindow()
 
         #cria objetos para as telas
         self.tela_login=Tela_login()
@@ -49,6 +51,9 @@ class Ui_Main(QtWidgets.QWidget):
         self.tela_saque=Tela_saque()
         self.tela_saque.setupUi(self.stack5)
 
+        self.tela_historico=Tela_historico()
+        self.tela_historico.setupUi(self.stack6)        
+
         #add ao QtStack
         self.QtStack.addWidget(self.stack0)
         self.QtStack.addWidget(self.stack1)
@@ -56,6 +61,7 @@ class Ui_Main(QtWidgets.QWidget):
         self.QtStack.addWidget(self.stack3)
         self.QtStack.addWidget(self.stack4)
         self.QtStack.addWidget(self.stack5)
+        self.QtStack.addWidget(self.stack6)
         '''
         '''
 
@@ -77,6 +83,7 @@ class Main(QMainWindow,Ui_Main):
         self.tela_menu.pushButton_menu_entra_saque.clicked.connect(self.abrirSaque)
         self.tela_menu.pushButton_menu_entra_transferencia.clicked.connect(self.abrirTransfere)
         self.tela_menu.pushButton_voltar_login.clicked.connect(self.botaoLogin)
+        self.tela_menu.pushButton_entrar_historico.clicked.connect(self.botaoHistorico)
 
         self.tela_cadastro.pushButton_cadastro_cadastrar.clicked.connect(self.botaoCadastro)
         self.tela_cadastro.pushButton_cadastro_entrar_login.clicked.connect(self.abrirLogin)
@@ -93,6 +100,7 @@ class Main(QMainWindow,Ui_Main):
         self.tela_saque.pushButton_saque_sacar.clicked.connect(self.botaoSaca)
         self.tela_saque.pushButton_saque_voltar_menu.clicked.connect(self.botaoMenu)
 
+        self.tela_historico.pushButton_historic_voltar.clicked.connect(self.botaoMenu)
 
     def botaoCadastro(self):
         nome=self.tela_cadastro.lineEdit_cadastro_nome.text()
@@ -196,6 +204,13 @@ class Main(QMainWindow,Ui_Main):
         else:
             QMessageBox.information(None, 'Menu', 'CPF não cadastrado!') 
             self.abrirLogin() 
+        
+    def botaoHistorico(self):
+        self.abrirHistorico()
+        extrato = ''
+        for i in self.contaLogada.historico.transacoes:
+            extrato = extrato +'\n'+ i
+        self.tela_historico.textEdit_historico.setText(extrato)
 
     def abrirLogin(self):
         self.QtStack.setCurrentIndex(0)
@@ -209,7 +224,8 @@ class Main(QMainWindow,Ui_Main):
         self.QtStack.setCurrentIndex(4)
     def abrirSaque(self):
         self.QtStack.setCurrentIndex(5)
-    
+    def abrirHistorico(self):
+        self.QtStack.setCurrentIndex(6)
         
 
 

@@ -73,7 +73,8 @@ border-radius:5px;</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/newPrefix/New Piskel (5).png);
+             <string notr="true">
+background-image: url(:/newPrefix/New_Piskel_(5).png);
 background-repeat: no-repeat;
 background-position: center;</string>
             </property>

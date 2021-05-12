@@ -200,7 +200,9 @@ class Main(QMainWindow,Ui_Main):
         if self.contaLogada!=None:
             self.abrirMenu()
             self.tela_menu.lineEdit_menu_nome_sobrenome_cliente.setText(self.contaLogada.titular.nome)
+            self.tela_menu.lineEdit_menu_nome_sobrenome_cliente.setEnabled(False)
             self.tela_menu.lineEdit_menu_saldo_conta.setText(str(self.contaLogada.saldo))
+            self.tela_menu.lineEdit_menu_saldo_conta.setEnabled(False)
         else:
             QMessageBox.information(None, 'Menu', 'CPF não cadastrado!') 
             self.abrirLogin() 

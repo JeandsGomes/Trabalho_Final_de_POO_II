@@ -1,3 +1,4 @@
+#from Banco import Cliente
 import sys
 import os
 
@@ -14,8 +15,10 @@ from tela_transfere2 import Tela_transfere
 from tela_cadastro import Tela_cadastro
 from tela_historico import Tela_historico
 
-from cadastro import Cadastro
-from Banco import Banco,Cliente
+#from cadastro import Cadastro
+#from Banco import Banco,Cliente
+
+from cliente import plataforma_cliente
 
 class Ui_Main(QtWidgets.QWidget):
     def setupUi(self,Main):
@@ -72,10 +75,13 @@ class Main(QMainWindow,Ui_Main):
         self.setupUi(self)
 
         #cria um objeto
-        self.cad=Cadastro()
-        self.contaLogada=None
-        self.contaTransfere=None
-        self.n_conta=0
+        #self.cad=Cadastro()
+        #self.contaLogada=None
+        #self.contaTransfere=None
+        #self.n_conta=0
+
+        self.cliente = plataforma_cliente()
+
         #funçoes dos botoes da tela,
         self.tela_login.pushButton_login_login.clicked.connect(self.botaoLogin)
         self.tela_login.pushButton_login_entrar_cadastrar.clicked.connect(self.abrirCadastro)
@@ -98,27 +104,20 @@ class Main(QMainWindow,Ui_Main):
         self.tela_transfere.pushButton_trnsf_transferir.clicked.connect(self.botaoTranfere)
         self.tela_transfere.pushButton_transf_voltar_menu.clicked.connect(self.botaoMenu)
 
-        self.tela_saque.pushButton_saque_sacar.clicked.connect(self.botaoSaca)
-        self.tela_saque.pushButton_saque_voltar_menu.clicked.connect(self.botaoMenu)
-
         self.tela_historico.pushButton_historic_voltar.clicked.connect(self.botaoMenu)
 
     def botaoCadastro(self):
-        self.show_logo()
         nome=self.tela_cadastro.lineEdit_cadastro_nome.text()
         sobrenome=self.tela_cadastro.lineEdit_cadastro_sobrenome.text()
         cpf=self.tela_cadastro.lineEdit_cadastro_CPF.text()
         if not(nome=='' or sobrenome=='' or cpf==''):
-            if self.cad.busca(cpf)==None:
-                p = Cliente(nome,sobrenome, cpf)
-                conta=Banco(self.n_conta+1, p, 0.0, 1000)
-                self.cad.cadastra(conta)
+            if (self.cliente.cadastro(nome,sobrenome,cpf)):
                 QMessageBox.information(None, 'Cadastro', 'Cadastro realizado!')
                 self.tela_cadastro.lineEdit_cadastro_nome.setText('')
                 self.tela_cadastro.lineEdit_cadastro_sobrenome.setText('')
                 self.tela_cadastro.lineEdit_cadastro_CPF.setText('')
             else:
-                QMessageBox.information(None, 'Cadastro', 'CPF informado já cadastrado.')
+                QMessageBox.information(None, 'Cadastro', 'cadastro não realizado.')
                 self.tela_cadastro.lineEdit_cadastro_nome.setText('')
                 self.tela_cadastro.lineEdit_cadastro_sobrenome.setText('')
                 self.tela_cadastro.lineEdit_cadastro_CPF.setText('')
@@ -126,17 +125,15 @@ class Main(QMainWindow,Ui_Main):
             QMessageBox.information(None, 'Cadastro', 'Todos os campos devem ser preenchidos!')  
 
         self.QtStack.setCurrentIndex(0)
+
     def botaoLogin(self):
-        self.show_logo()
         cpf=self.tela_login.lineEdit_login_cpf.text()
-        pes=self.cad.busca(cpf)
+        #pes=self.cad.busca(cpf)
         if cpf != '':
-            if pes!=None:
-                self.contaLogada=pes
+            if (self.cliente.login(cpf)):
                 self.tela_login.lineEdit_login_cpf.setText('')
                 self.botaoMenu()
             else:
-                self.contaLogada=None
                 QMessageBox.information(None, 'Login', 'CPF não cadastrado!') 
                 self.tela_login.lineEdit_login_cpf.setText('')
                 self.abrirLogin() 
@@ -147,41 +144,46 @@ class Main(QMainWindow,Ui_Main):
     def botaoTranfere(self):
         valor=self.tela_transfere.lineEdit_transf_valor.text()
         cpf=self.tela_transfere.lineEdit_trnsf_cpf.text()
-        contaTransfere=self.cad.busca(cpf)
        
         if valor!='' and cpf !='':
-            if contaTransfere != None and contaTransfere != self.contaLogada:
+            if(cpf != self.cliente.cpf):
                 try:
-                    if(self.contaLogada.transferir(contaTransfere,float(valor))):
-                        QMessageBox.information(None, 'Transferencia', 'Transferencia realizada!')
-                        #self.cad[1].depositar(valor)
-                        #self.contaTransfere.depositar(valor)
-                        #self.contaTransfere=None
+                    float(valor)
+                    if self.cliente.transferencia(self.cliente.cpf,valor,cpf):
+                                QMessageBox.information(None, 'Transferencia', 'Transferencia realizada!')
+                                #self.cad[1].depositar(valor)
+                                #self.contaTransfere.depositar(valor)
+                                #self.contaTransfere=None
                     else:
-                        QMessageBox.information(None, 'Transferencia', 'Transferencia não realizada!')
-
+                        QMessageBox.information(None, 'Transferencia', 'Conta destino não enocontrada!')
                 except:
                     QMessageBox.information(None, 'Transferencia', 'Apenas digitos!')
             else:
-                if contaTransfere == self.contaLogada:
-                    QMessageBox.information(None, 'Transferencia', 'Conta destino não pode ser a mesma de origem!')
-                else:
-                    QMessageBox.information(None, 'Transferencia', 'Conta destino não enocontrada!')
-            self.tela_transfere.lineEdit_transf_valor.setText('')
-            self.tela_transfere.lineEdit_trnsf_cpf.setText('')
+                QMessageBox.information(None, 'Transferencia', 'Conta destino e emisora sao as mesmas!')
+        else:
+            QMessageBox.information(None, 'Transferencia', 'Preencha todos os campos!')
+
+        self.tela_transfere.lineEdit_transf_valor.setText('')
+        self.tela_transfere.lineEdit_trnsf_cpf.setText('')
         #self.botaoMenu()
 
     def botaoSaca(self):
+        print('1')
         valor=self.tela_saque.lineEdit_saque_valor.text()
         if(valor !=''):
             try:
-                if(self.contaLogada.sacar(float(valor))):
-                    QMessageBox.information(None, 'Saque', 'saque realizado!')
+                float(valor)
+                type(valor)
+                if(self.cliente.saque(self.cliente.cpf,valor)):
+                    QMessageBox.information(None, 'Saque', 'Saque realizado!')
                 else:
                     QMessageBox.information(None, 'Saque', 'Saque não realizado!')
             except:
                 QMessageBox.information(None, 'Saque', 'Apenas digitos!')
-            self.tela_saque.lineEdit_saque_valor.setText('')
+        else:
+            QMessageBox.information(None, 'Saque', 'Preencha todos os campos!')
+        
+        self.tela_saque.lineEdit_saque_valor.setText('')
         #self.botaoMenu()
 
         
@@ -189,7 +191,8 @@ class Main(QMainWindow,Ui_Main):
         valor=self.tela_deposito.lineEdit_deposito_valor.text()
         if valor !='':
             try:
-                if(self.contaLogada.depositar(float(valor))):
+                float(valor)
+                if(self.cliente.deposito(self.cliente.cpf,valor)):
                     QMessageBox.information(None, 'Deposito', 'Deposito realizado!')
                 else:
                     QMessageBox.information(None, 'Deposito', 'Deposito não realizado,\n limite ultrapassado!')
@@ -197,14 +200,16 @@ class Main(QMainWindow,Ui_Main):
             except:
                 QMessageBox.information(None, 'Deposito', 'Apenas digitos!')
             self.tela_deposito.lineEdit_deposito_valor.setText('')
+        else:
+            QMessageBox.information(None, 'Deposito', 'Preencha todos os campos!')
         #self.botaoMenu()
 
     def botaoMenu(self):
-        if self.contaLogada!=None:
+        if self.cliente.login(self.cliente.cpf):
             self.abrirMenu()
-            self.tela_menu.lineEdit_menu_nome_sobrenome_cliente.setText(self.contaLogada.titular.nome)
+            self.tela_menu.lineEdit_menu_nome_sobrenome_cliente.setText(self.cliente.nome)
             self.tela_menu.lineEdit_menu_nome_sobrenome_cliente.setEnabled(False)
-            self.tela_menu.lineEdit_menu_saldo_conta.setText(str(self.contaLogada.saldo))
+            self.tela_menu.lineEdit_menu_saldo_conta.setText(str(self.cliente.saldo))
             self.tela_menu.lineEdit_menu_saldo_conta.setEnabled(False)
         else:
             QMessageBox.information(None, 'Menu', 'CPF não cadastrado!') 
@@ -212,13 +217,12 @@ class Main(QMainWindow,Ui_Main):
         
     def botaoHistorico(self):
         self.abrirHistorico()
+        self.cliente.historico(self.cliente.cpf)
         extrato = ''
-        for i in self.contaLogada.historico.transacoes:
+        for i in self.cliente.transacoes:
             extrato = extrato +'\n'+ i
         self.tela_historico.textEdit_historico.setText(extrato)
     
-    def show_logo(self):
-        self.label_cadastro_logo.setPixmap(QtGui.QPixmap("New_Piskel_(5).jpg"))
 
     def abrirLogin(self):
         self.QtStack.setCurrentIndex(0)

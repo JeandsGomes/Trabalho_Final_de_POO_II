@@ -105,7 +105,7 @@ class Banco():
         return self._titular
 
     def sacar(self,valor):
-        if(valor < self._saldo):
+        if(valor <= self._saldo):
             self._saldo -= valor
             self._historico.transacoes.append("saque de {}".format(valor))
             return True

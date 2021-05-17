@@ -117,7 +117,7 @@ class Main(QMainWindow,Ui_Main):
                 self.tela_cadastro.lineEdit_cadastro_sobrenome.setText('')
                 self.tela_cadastro.lineEdit_cadastro_CPF.setText('')
             else:
-                QMessageBox.information(None, 'Cadastro', 'CPF informado já cadastrado.')
+                QMessageBox.information(None, 'Cadastro', 'cadastro não realizado.')
                 self.tela_cadastro.lineEdit_cadastro_nome.setText('')
                 self.tela_cadastro.lineEdit_cadastro_sobrenome.setText('')
                 self.tela_cadastro.lineEdit_cadastro_CPF.setText('')

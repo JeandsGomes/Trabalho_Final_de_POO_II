@@ -52,7 +52,10 @@ class plataforma_cliente():
 
     def cadastro(self,nome,sobrenome,cpf):
         codigo = '0/'+nome+'/'+sobrenome+'/'+cpf
-        saida = self.conecxao_servidor(codigo)
+        try:
+            saida = self.conecxao_servidor(codigo)
+        except:
+            return False
         print(codigo)
         saida_lst = saida.split('/')
         if(saida_lst[0]=='1'):
@@ -62,7 +65,10 @@ class plataforma_cliente():
 
     def login(self,cpf):
         codigo = '1/'+cpf
-        saida = self.conecxao_servidor(codigo)
+        try:
+            saida = self.conecxao_servidor(codigo)
+        except:
+            return False
         saida_lst = saida.split('/')
         if(saida_lst[0]=='1'):
             self._nome = saida_lst[1]
@@ -75,7 +81,10 @@ class plataforma_cliente():
 
     def deposito(self,cpf,valor):
         codigo = '2'+'/'+cpf+'/'+valor
-        saida = self.conecxao_servidor(codigo)
+        try:
+            saida = self.conecxao_servidor(codigo)
+        except:
+            return False
         saida_lst = saida.split('/')
         if(saida_lst[0]=='1'):
             self._saldo = saida_lst[1]
@@ -84,7 +93,10 @@ class plataforma_cliente():
 
     def saque(self,cpf,valor):
         codigo = '3'+'/'+cpf+'/'+valor
-        saida = self.conecxao_servidor(codigo)
+        try:
+            saida = self.conecxao_servidor(codigo)
+        except:
+            return False
         saida_lst = saida.split('/')
         if(saida_lst[0]=='1'):
             self._saldo = saida_lst[1]
@@ -93,7 +105,10 @@ class plataforma_cliente():
 
     def transferencia(self,cpf,valor,cpf_para_transferir):
         codigo = '4'+'/'+cpf+'/'+valor+'/'+cpf_para_transferir
-        saida = self.conecxao_servidor(codigo)
+        try:
+            saida = self.conecxao_servidor(codigo)
+        except:
+            return False
         saida_lst = saida.split('/')
         if(saida_lst[0]=='1'):
             self._saldo = saida_lst[1]
@@ -102,7 +117,10 @@ class plataforma_cliente():
 
     def historico(self,cpf):
         codigo = '5'+'/'+cpf
-        saida = self.conecxao_servidor(codigo)
+        try:
+            saida = self.conecxao_servidor(codigo)
+        except:
+            return False
         saida_lst = saida.split('/')
         self._transacoes = []
         print(self._cpf)

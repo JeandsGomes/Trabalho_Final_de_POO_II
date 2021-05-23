@@ -103,7 +103,7 @@ class Main(QMainWindow,Ui_Main):
         self.tela_cadastro.pushButton_cadastro_entrar_login.clicked.connect(self.abrirLogin)
 
         self.tela_saque.pushButton_saque_sacar.clicked.connect(self.botaoSaca)
-        self.tela_saque.pushButton_saque_voltar_menu.clicked.connect(self.abrirMenu)
+        self.tela_saque.pushButton_saque_voltar_menu.clicked.connect(self.botaoMenu)
 
         self.tela_deposito.pushButton_deposito_depositar.clicked.connect(self.botaoDeposito)
         self.tela_deposito.pushButton_deposito_voltar_menu.clicked.connect(self.botaoMenu)

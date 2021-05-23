@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module cliente</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>cliente</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cjosef%5Conedrive%5Cdocumentos%5Cuniversidade%5Civperiodo%5Cpoo2%5Ccontrole-de-vers-o---git---reposit-ros%5Cnova_vercao_com_servidor%5Ccliente%5Ccliente.py">c:\users\josef\onedrive\documentos\universidade\ivperiodo\poo2\controle-de-vers-o---git---reposit-ros\nova_vercao_com_servidor\cliente\cliente.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="socket.html">socket</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="cliente.html#plataforma_cliente">plataforma_cliente</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="plataforma_cliente">class <strong>plataforma_cliente</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>O&nbsp;objeto&nbsp;<a href="#plataforma_cliente">plataforma_cliente</a>&nbsp;contém&nbsp;um&nbsp;cliente.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="plataforma_cliente-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Todos&nbsp;as&nbsp;informações&nbsp;do&nbsp;objeto&nbsp;são&nbsp;inicializados&nbsp;e&nbsp;deixados&nbsp;vazias&nbsp;até&nbsp;ser&nbsp;adcionado&nbsp;informações.</tt></dd></dl>
+
+<dl><dt><a name="plataforma_cliente-cadastro"><strong>cadastro</strong></a>(self, nome, sobrenome, cpf)</dt><dd><tt>Para&nbsp;cadastrar&nbsp;uma&nbsp;pessoa&nbsp;é&nbsp;preciso&nbsp;se&nbsp;conectar&nbsp;ao&nbsp;servidor&nbsp;do&nbsp;banco.<br>
+&nbsp;<br>
+:Parametros&nbsp;nome,sobrenome,CPf:&nbsp;contém&nbsp;as&nbsp;informações&nbsp;da&nbsp;pessoa&nbsp;que&nbsp;deseja&nbsp;ser&nbsp;cleinte&nbsp;do&nbsp;banco.<br>
+:tipo&nbsp;nome,sobrenome,CPf:&nbsp;str<br>
+:raise:&nbsp;se&nbsp;a&nbsp;classe&nbsp;retornar&nbsp;false,&nbsp;não&nbsp;foi&nbsp;possivel&nbsp;fazer&nbsp;o&nbsp;cadastro&nbsp;da&nbsp;pessoa&nbsp;no&nbsp;banco.<br>
+:retorna&nbsp;bool.</tt></dd></dl>
+
+<dl><dt><a name="plataforma_cliente-conecxao_servidor"><strong>conecxao_servidor</strong></a>(self, codigo)</dt><dd><tt>Para&nbsp;os&nbsp;dados&nbsp;do&nbsp;cliente&nbsp;serem&nbsp;salvos,&nbsp;devera&nbsp;se&nbsp;conectar&nbsp;com&nbsp;o&nbsp;servidor&nbsp;do&nbsp;banco.<br>
+&nbsp;<br>
+Após&nbsp;se&nbsp;conectar&nbsp;com&nbsp;o&nbsp;servidor&nbsp;será&nbsp;possivel&nbsp;fazer&nbsp;todas&nbsp;as&nbsp;operações&nbsp;disponíveis.<br>
+&nbsp;<br>
+:parametro&nbsp;codigo:&nbsp;são&nbsp;as&nbsp;informaçoes&nbsp;com&nbsp;alteraçoes&nbsp;na&nbsp;conta&nbsp;de&nbsp;algum&nbsp;cliente&nbsp;no&nbsp;servidor.<br>
+:retorna&nbsp;as&nbsp;informações&nbsp;obtidas&nbsp;no&nbsp;servidor.</tt></dd></dl>
+
+<dl><dt><a name="plataforma_cliente-deposito"><strong>deposito</strong></a>(self, cpf, valor)</dt><dd><tt>Para&nbsp;realizar&nbsp;deposito&nbsp;é&nbsp;preciso&nbsp;se&nbsp;conectar&nbsp;ao&nbsp;servidor.<br>
+:Parametro&nbsp;CPF:&nbsp;deve&nbsp;conter&nbsp;a&nbsp;informação&nbsp;de&nbsp;um&nbsp;cliente&nbsp;já&nbsp;cadastro&nbsp;no&nbsp;servidor.<br>
+:Tipo&nbsp;cpf:&nbsp;str<br>
+:Parametro&nbsp;valor:&nbsp;o&nbsp;valor&nbsp;a&nbsp;ser&nbsp;creditado&nbsp;na&nbsp;conta&nbsp;do&nbsp;cliente.&nbsp;<br>
+:Tipo&nbsp;valor:&nbsp;Float.<br>
+:rises::&nbsp;class&nbsp;return&nbsp;false:&nbsp;se&nbsp;não&nbsp;for&nbsp;possivel&nbsp;se&nbsp;conectar&nbsp;com&nbsp;o&nbsp;servidor&nbsp;do&nbsp;banco.<br>
+:return:&nbsp;bool.</tt></dd></dl>
+
+<dl><dt><a name="plataforma_cliente-historico"><strong>historico</strong></a>(self, cpf)</dt><dd><tt>Para&nbsp;visualizar&nbsp;o&nbsp;historico&nbsp;de&nbsp;transações&nbsp;é&nbsp;preciso&nbsp;se&nbsp;conectar&nbsp;ao&nbsp;servidor.<br>
+:Parametro&nbsp;CPF:&nbsp;deve&nbsp;conter&nbsp;a&nbsp;informação&nbsp;de&nbsp;um&nbsp;cliente&nbsp;já&nbsp;cadastro&nbsp;no&nbsp;servidor&nbsp;que&nbsp;irá&nbsp;vizualizar&nbsp;suas&nbsp;transaçoes.<br>
+:rises::&nbsp;class&nbsp;return&nbsp;false:&nbsp;se&nbsp;não&nbsp;for&nbsp;possivel&nbsp;se&nbsp;conectar&nbsp;com&nbsp;o&nbsp;servidor&nbsp;do&nbsp;banco.<br>
+:return:&nbsp;bool.</tt></dd></dl>
+
+<dl><dt><a name="plataforma_cliente-login"><strong>login</strong></a>(self, cpf)</dt><dd><tt>Para&nbsp;um&nbsp;cliente&nbsp;realizar&nbsp;operações&nbsp;em&nbsp;sua&nbsp;conta&nbsp;é&nbsp;preciso&nbsp;realizar&nbsp;o&nbsp;login.<br>
+&nbsp;<br>
+:Parametro&nbsp;cpf:&nbsp;deve&nbsp;conter&nbsp;a&nbsp;informação&nbsp;de&nbsp;um&nbsp;cliente&nbsp;que&nbsp;deseja&nbsp;fazer&nbsp;login&nbsp;em&nbsp;sua&nbsp;conta&nbsp;existente.<br>
+:Tipo&nbsp;do&nbsp;cpf:&nbsp;str<br>
+:rises::&nbsp;class&nbsp;return&nbsp;false:&nbsp;se&nbsp;não&nbsp;for&nbsp;possivel&nbsp;se&nbsp;conectar&nbsp;com&nbsp;o&nbsp;servidor&nbsp;do&nbsp;banco.<br>
+:return:&nbsp;bool.</tt></dd></dl>
+
+<dl><dt><a name="plataforma_cliente-saque"><strong>saque</strong></a>(self, cpf, valor)</dt><dd><tt>Para&nbsp;realizar&nbsp;saque&nbsp;é&nbsp;preciso&nbsp;se&nbsp;conectar&nbsp;ao&nbsp;servidor.<br>
+:Parametro&nbsp;CPF:&nbsp;deve&nbsp;conter&nbsp;a&nbsp;informação&nbsp;de&nbsp;um&nbsp;cliente&nbsp;já&nbsp;cadastro&nbsp;no&nbsp;servidor.<br>
+:Parametro&nbsp;valor:&nbsp;o&nbsp;valor&nbsp;a&nbsp;ser&nbsp;debitado&nbsp;na&nbsp;conta&nbsp;do&nbsp;cliente.&nbsp;:Tipo&nbsp;do&nbsp;parametro:&nbsp;Float.<br>
+:rises::&nbsp;class&nbsp;return&nbsp;false:&nbsp;se&nbsp;não&nbsp;for&nbsp;possivel&nbsp;se&nbsp;conectar&nbsp;com&nbsp;o&nbsp;servidor&nbsp;do&nbsp;banco.<br>
+:return:&nbsp;bool.</tt></dd></dl>
+
+<dl><dt><a name="plataforma_cliente-transferencia"><strong>transferencia</strong></a>(self, cpf, valor, cpf_para_transferir)</dt><dd><tt>Para&nbsp;realizar&nbsp;transferecia&nbsp;é&nbsp;preciso&nbsp;se&nbsp;conectar&nbsp;ao&nbsp;servidor.<br>
+:Parametro&nbsp;CPF:&nbsp;deve&nbsp;conter&nbsp;a&nbsp;informação&nbsp;de&nbsp;um&nbsp;cliente&nbsp;já&nbsp;cadastro&nbsp;no&nbsp;servidor&nbsp;que&nbsp;irá&nbsp;realizar&nbsp;a&nbsp;transferencia.<br>
+:Parametro&nbsp;cpf_para_transferir:&nbsp;contem&nbsp;a&nbsp;informação&nbsp;de&nbsp;um&nbsp;cliente&nbsp;já&nbsp;cadastro&nbsp;no&nbsp;servidor&nbsp;que&nbsp;irá&nbsp;recebe&nbsp;a&nbsp;transferencia.<br>
+:Parametro&nbsp;valor:&nbsp;o&nbsp;valor&nbsp;a&nbsp;ser&nbsp;creditado&nbsp;na&nbsp;conta&nbsp;do&nbsp;cliente.&nbsp;:Tipo&nbsp;do&nbsp;parametro:&nbsp;Float.<br>
+:rises::&nbsp;class&nbsp;return&nbsp;false:&nbsp;se&nbsp;não&nbsp;for&nbsp;possivel&nbsp;se&nbsp;conectar&nbsp;com&nbsp;o&nbsp;servidor&nbsp;do&nbsp;banco.<br>
+:return:&nbsp;bool.</tt></dd></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>cpf</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;CPF&nbsp;do&nbsp;cliente.</tt></dd>
+</dl>
+<dl><dt><strong>nome</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;nome&nbsp;do&nbsp;cliente.</tt></dd>
+</dl>
+<dl><dt><strong>saldo</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;Saldo&nbsp;do&nbsp;cliente.</tt></dd>
+</dl>
+<dl><dt><strong>sobrenome</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;sobrenome&nbsp;do&nbsp;cliente.</tt></dd>
+</dl>
+<dl><dt><strong>transacoes</strong></dt>
+<dd><tt>retorna&nbsp;as&nbsp;transações&nbsp;do&nbsp;cliente.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

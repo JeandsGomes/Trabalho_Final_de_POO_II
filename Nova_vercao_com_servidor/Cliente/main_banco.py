@@ -21,6 +21,10 @@ from tela_historico import Tela_historico
 from cliente import plataforma_cliente
 
 class Ui_Main(QtWidgets.QWidget):
+    '''
+    O objeto Ui_Main possui varias telas.
+    
+    '''
     def setupUi(self,Main):
         Main.setObjectName('Main')
         Main.resize(640,480)#tamnaho da tela
@@ -70,6 +74,9 @@ class Ui_Main(QtWidgets.QWidget):
         '''
 
 class Main(QMainWindow,Ui_Main):
+    '''
+     O objeto Main possui varios botões conectados que levam as suas respectivas telas.
+    '''
     def __init__(self,parent=None):
         super(Main, self).__init__(parent)
         self.setupUi(self)
@@ -107,6 +114,11 @@ class Main(QMainWindow,Ui_Main):
         self.tela_historico.pushButton_historic_voltar.clicked.connect(self.botaoMenu)
 
     def botaoCadastro(self):
+        '''
+            Quando o click é no botão cadastrado é capturado as informações digitadas.
+            Para o cadastro ser realizado nenhum dos campos devera esta vazio.
+            :rise: exibe uma tela informando quando o cadastro não é realizado.
+        '''
         nome=self.tela_cadastro.lineEdit_cadastro_nome.text()
         sobrenome=self.tela_cadastro.lineEdit_cadastro_sobrenome.text()
         cpf=self.tela_cadastro.lineEdit_cadastro_CPF.text()
@@ -127,6 +139,11 @@ class Main(QMainWindow,Ui_Main):
         self.QtStack.setCurrentIndex(0)
 
     def botaoLogin(self):
+        '''
+            Quando o click é no botão login é capturado as informações digitadas.
+            Para o login ser realizado nenhum dos campos devera esta vazio.
+            :rise: exibe uma tela informando quando o login não é realizado.
+        '''
         cpf=self.tela_login.lineEdit_login_cpf.text()
         #pes=self.cad.busca(cpf)
         if cpf != '':
@@ -142,6 +159,11 @@ class Main(QMainWindow,Ui_Main):
 
         
     def botaoTranfere(self):
+        '''
+            Quando o click é no botão transferencia é capturado as informações digitadas.
+            Para a transferencia ser realizada nenhum dos campos devera esta vazio ou se a conta destino não for encontrada.
+            :rise: exibe uma tela informando quando a transferencia não é realizada ou a conta destino não é encontrada se valor digitado não for um digito.
+        '''
         valor=self.tela_transfere.lineEdit_transf_valor.text()
         cpf=self.tela_transfere.lineEdit_trnsf_cpf.text()
        
@@ -168,6 +190,11 @@ class Main(QMainWindow,Ui_Main):
         #self.botaoMenu()
 
     def botaoSaca(self):
+        '''
+            Quando o click é no botão saque é capturado as informações digitadas.
+            Para o saque ser realizado nenhum dos campos devera esta vazio.
+            :rise: exibe uma tela informando quando a transferencia não é realizada ou se valor digitado não for um digito.
+        '''
         print('1')
         valor=self.tela_saque.lineEdit_saque_valor.text()
         if(valor !=''):
@@ -188,6 +215,12 @@ class Main(QMainWindow,Ui_Main):
 
         
     def botaoDeposito(self):
+        '''
+            Quando o click é no botão de deposito, é capturado as informações digitadas.
+            Para o deposito ser realizado nenhum dos campos deve esta vazio.
+            :rise: exibe uma tela informando quando o deposito não é realizado a conta destino nao for encontado
+            ou se valor digitado não for um digito.
+        '''
         valor=self.tela_deposito.lineEdit_deposito_valor.text()
         if valor !='':
             try:
@@ -205,6 +238,11 @@ class Main(QMainWindow,Ui_Main):
         #self.botaoMenu()
 
     def botaoMenu(self):
+        '''
+            Quando o click é no botão do Menu, é verificado o cpf na lista de contas do banco.
+            Para acessar o menu é preciso estar na lista de contas do banco.
+            :rise: exibe uma tela informando quando o cpf não é encontrado.
+        '''
         if self.cliente.login(self.cliente.cpf):
             self.abrirMenu()
             self.tela_menu.lineEdit_menu_nome_sobrenome_cliente.setText(self.cliente.nome)
@@ -216,6 +254,9 @@ class Main(QMainWindow,Ui_Main):
             self.abrirLogin() 
         
     def botaoHistorico(self):
+        '''
+            Quando o click é no botão do historico é aberto a tela do historico com todas as movimentações da conta.
+        '''
         self.abrirHistorico()
         self.cliente.historico(self.cliente.cpf)
         extrato = ''

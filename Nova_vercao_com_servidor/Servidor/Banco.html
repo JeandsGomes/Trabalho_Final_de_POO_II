@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Banco</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Banco</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cjeand%5Cdesktop%5Ctrabalho%20de%20poo%20ii%5Ccontrole-de-vers-o---git---reposit-ros%5Cnova_vercao_com_servidor%5Cservidor%5Cbanco.py">c:\users\jeand\desktop\trabalho de poo ii\controle-de-vers-o---git---reposit-ros\nova_vercao_com_servidor\servidor\banco.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Banco.html#Banco">Banco</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Banco.html#Cliente">Cliente</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Banco.html#Historico">Historico</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Banco">class <strong>Banco</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Banco">Banco</a>(numero,&nbsp;cliente,&nbsp;saldo,&nbsp;limite)<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Banco-__init__"><strong>__init__</strong></a>(self, numero, cliente, saldo, limite)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Banco-depositar"><strong>depositar</strong></a>(self, valor)</dt><dd><tt>Um&nbsp;valor&nbsp;so&nbsp;pode&nbsp;ser&nbsp;somado&nbsp;ao&nbsp;saldo&nbsp;do&nbsp;cliente&nbsp;se&nbsp;esse&nbsp;valor&nbsp;for&nbsp;maior&nbsp;que&nbsp;0&nbsp;e&nbsp;não&nbsp;ultrapassar&nbsp;o&nbsp;limite.<br>
+:Parametro&nbsp;valor:&nbsp;A&nbsp;quantidade&nbsp;a&nbsp;ser&nbsp;somado&nbsp;no&nbsp;saldo<br>
+:tipo&nbsp;valor:&nbsp;float<br>
+:return:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="Banco-sacar"><strong>sacar</strong></a>(self, valor)</dt><dd><tt>Um&nbsp;valor&nbsp;só&nbsp;pode&nbsp;ser&nbsp;retirado&nbsp;do&nbsp;saldo&nbsp;se&nbsp;for&nbsp;maior&nbsp;que&nbsp;0&nbsp;e&nbsp;o&nbsp;saldo&nbsp;for&nbsp;maior&nbsp;que&nbsp;o&nbsp;valor&nbsp;informado.<br>
+:Parametro&nbsp;valor:&nbsp;A&nbsp;quantidade&nbsp;a&nbsp;ser&nbsp;subtraido&nbsp;no&nbsp;saldo<br>
+:tipo&nbsp;valor:&nbsp;float<br>
+:return:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="Banco-transferir"><strong>transferir</strong></a>(self, destino, valor)</dt><dd><tt>Um&nbsp;valor&nbsp;só&nbsp;pode&nbsp;ser&nbsp;transferido&nbsp;se&nbsp;o&nbsp;saldo&nbsp;do&nbsp;atual&nbsp;cliente&nbsp;possuir&nbsp;saldo.<br>
+:Parametro&nbsp;destino:&nbsp;A&nbsp;conta&nbsp;destino&nbsp;que&nbsp;ira&nbsp;receber&nbsp;a&nbsp;quantia.<br>
+:tipo&nbsp;destino:&nbsp;<a href="#Banco">Banco</a><br>
+:Parametro&nbsp;valor:&nbsp;A&nbsp;quantidade&nbsp;a&nbsp;ser&nbsp;somado&nbsp;no&nbsp;saldo&nbsp;da&nbsp;conta&nbsp;destino&nbsp;e&nbsp;subrtraido&nbsp;da&nbsp;conta&nbsp;remetente.<br>
+:tipo:&nbsp;float.<br>
+:return:bool.</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Banco-get_total_contas"><strong>get_total_contas</strong></a>()</dt><dd><tt>retorna&nbsp;o&nbsp;numero&nbsp;de&nbsp;contas&nbsp;cadastradas&nbsp;no&nbsp;banco.</tt></dd></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>extrato</strong></dt>
+<dd><tt>retorna&nbsp;uma&nbsp;str&nbsp;com&nbsp;numero&nbsp;da&nbsp;conta&nbsp;e&nbsp;saldo.</tt></dd>
+</dl>
+<dl><dt><strong>historico</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;historico&nbsp;da&nbsp;conta.</tt></dd>
+</dl>
+<dl><dt><strong>saldo</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;saldo&nbsp;da&nbsp;conta.</tt></dd>
+</dl>
+<dl><dt><strong>titular</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;titular&nbsp;da&nbsp;conta.</tt></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>limite</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;limite&nbsp;da&nbsp;conta.</tt></dd>
+</dl>
+<dl><dt><strong>numero</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;numero&nbsp;da&nbsp;conta.</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Cliente">class <strong>Cliente</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Cliente">Cliente</a>(nome,&nbsp;sobrenome,&nbsp;cpf)<br>
+&nbsp;<br>
+O&nbsp;objeto&nbsp;<a href="#Cliente">Cliente</a>&nbsp;possui&nbsp;um&nbsp;cliente.<br>
+:paramentro&nbsp;nome:&nbsp;O&nbsp;paramentro&nbsp;é&nbsp;usado&nbsp;para&nbsp;obter&nbsp;o&nbsp;nome&nbsp;do&nbsp;cliente<br>
+:tipo&nbsp;nome:&nbsp;str<br>
+:paramentro&nbsp;sobrenome:&nbsp;O&nbsp;paramentro&nbsp;é&nbsp;usado&nbsp;para&nbsp;obter&nbsp;o&nbsp;sobrenome&nbsp;do&nbsp;cliente<br>
+:tipo&nbsp;sobrenome:&nbsp;str<br>
+:paramentro&nbsp;cpf:&nbsp;O&nbsp;paramentro&nbsp;é&nbsp;usado&nbsp;para&nbsp;obter&nbsp;o&nbsp;cpf&nbsp;do&nbsp;cliente<br>
+:tipo&nbsp;nome:&nbsp;str<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Cliente-__init__"><strong>__init__</strong></a>(self, nome, sobrenome, cpf)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>cpf</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;cpf</tt></dd>
+</dl>
+<dl><dt><strong>nome</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;nome</tt></dd>
+</dl>
+<dl><dt><strong>sobrenome</strong></dt>
+<dd><tt>retorna&nbsp;o&nbsp;sobrenome</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Historico">class <strong>Historico</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Historico-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Historico-imprime"><strong>imprime</strong></a>(self)</dt><dd><tt>Exibe&nbsp;todas&nbsp;as&nbsp;transações&nbsp;feitas&nbsp;pelo&nbsp;cliente&nbsp;em&nbsp;sua&nbsp;conta.</tt></dd></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>transacoes</strong></dt>
+<dd><tt>retorna&nbsp;as&nbsp;transações&nbsp;feitas&nbsp;por&nbsp;um&nbsp;cliente.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

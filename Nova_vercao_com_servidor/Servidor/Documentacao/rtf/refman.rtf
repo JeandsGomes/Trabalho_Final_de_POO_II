@@ -1,0 +1,3081 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\info 
+{\title {\comment Servidor }Servidor}
+{\comment Gerado por doxygen1.9.1.}
+{\creatim \yr2021\mo5\dy23\hr21\min1\sec0}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt Servidor}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Vers\'E3o \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Domingo, 23 de Maio de 2021 }}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Sum\'E1rio\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+<em>Namespaces</em>\par \pard\plain 
+{\tc \v <em>Namespaces</em>}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Lista de Namespaces\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Esta \'E9 a lista de todos os Namespaces com suas respectivas descri\'E7\'F5es:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b Banco} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Banco_T} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b cadastro} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b main_servidore} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b servidor} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b t_servidor} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\'CDndice Hier\'E1rquico\par \pard\plain 
+{\tc \v \'CDndice Hier\'E1rquico}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Hierarquia de Classes\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Esta lista de hierarquias est\'E1 parcialmente ordenada (ordem alfab\'E9tica):}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Banco.Banco\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAT \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+cadastro.Cadastro\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Banco.Cliente\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Banco.Historico\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+servidor.Servidor\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+TestCase
+{
+\par
+\pard\plain \s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Banco_T.Teste_Banco\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\'CDndice dos Componentes\par \pard\plain 
+{\tc \v \'CDndice dos Componentes}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Lista de Classes\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Aqui est\'E3o as classes, estruturas, uni\'F5es e interfaces e suas respectivas descri\'E7\'F5es:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b Banco.Banco} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAT \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b cadastro.Cadastro} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Banco.Cliente} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Banco.Historico} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b servidor.Servidor} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Banco_T.Teste_Banco} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\'CDndice dos Arquivos\par \pard\plain 
+{\tc \v \'CDndice dos Arquivos}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Lista de Arquivos\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Esta \'E9 a lista de todos os arquivos e suas respectivas descri\'E7\'F5es:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b Banco.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b Banco_T.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b cadastro.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b main_servidore.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b servidor.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b t_servidor.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+<em>Namespace</em>\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Ref\'EAncia do Namespace Banco\par \pard\plain 
+{\tc\tcl2 \v Banco}
+{\xe \v Banco}
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Cliente}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Historico}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Banco}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Ref\'EAncia do Namespace Banco_T\par \pard\plain 
+{\tc\tcl2 \v Banco_T}
+{\xe \v Banco_T}
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Teste_Banco}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_Historico_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_Cliente_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_nome_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_nome_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_nome_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_nome_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_sobrenome_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_sobrenome_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_sobrenome_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_sobrenome_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_cpf_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_cpf_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_cpf_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_cpf_get_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_numero_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_numero_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_numero_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_numero_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_titular_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_titular_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_saldo_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_saldo_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_limite_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_limite_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_limite_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_set_limite_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_deposito_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_deposito_Banco_saldo_esperado} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_deposito_Banco_imprimir_historico} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_sacar_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_saca_Banco_valor_True} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_saca_Banco_valor_False} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_saca_Banco_saldo_esperado} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_saca_Banco_imprimir_historico} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_extrato_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_extrato_Banco_valor_esperado} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_extrato_Banco_imprimir_historico} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_transferir_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_trasferir_Banco_True} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_trasferir_Banco_False} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_trasferir_Banco_valor_esperado} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_transferir_Banco_imprimir_historico} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_total_contas_existe_Banco_banco_0} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b teste_get_total_contas_existe_Banco_Banco} (self)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+{\xe \v teste_Banco_existe\:Banco_T}
+{\xe \v Banco_T\:teste_Banco_existe}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_Banco_existe (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 117     {\cf17 def }teste_Banco_existe(self):\par
+118         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+119         banco = Banco(1,cliente,201,500)\par
+120 \par
+121 {\cf20 #TESTES DE GET E SET DA CLASSE BANCO}\par
+122 \par
+}
+}
+{\xe \v teste_Cliente_existe\:Banco_T}
+{\xe \v Banco_T\:teste_Cliente_existe}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_Cliente_existe (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 38     {\cf17 def }teste_Cliente_existe(self):\par
+39         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+40 \par
+41 \par
+42 \par
+43 {\cf20 #TESTES DE GET E SET DA CLASSE CLIENTE}\par
+44 {\cf20 #teste_SeExixteFuncaoNomeCliente}\par
+}
+}
+{\xe \v teste_deposito_Banco_existe\:Banco_T}
+{\xe \v Banco_T\:teste_deposito_Banco_existe}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_deposito_Banco_existe (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 201     {\cf17 def }teste_deposito_Banco_existe(self):\par
+202         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+203         banco = Banco(1,cliente,201,500)\par
+204         banco.depositar(20)\par
+205 \par
+}
+}
+{\xe \v teste_deposito_Banco_imprimir_historico\:Banco_T}
+{\xe \v Banco_T\:teste_deposito_Banco_imprimir_historico}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_deposito_Banco_imprimir_historico (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 216     {\cf17 def }teste_deposito_Banco_imprimir_historico(self):\par
+217         valor_entrada = 20\par
+218         valor_esperado = [{\cf22 "deposito de \{\}"}.format(valor_entrada)]\par
+219         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+220         banco = Banco(1,cliente,201,500)\par
+221         banco.depositar(20)\par
+222         self.assertEqual(banco.historico.transacoes,valor_esperado)\par
+223 \par
+224 \par
+225 {\cf20 #    }\par
+226 {\cf20 #    *saca e}\par
+227 {\cf20 #        *Decrementa com o Valor o self.saldo }\par
+228 {\cf20 #       *impedir o saque caso o valor do saldo foir menor retornando False}\par
+229 {\cf20 #       *caso o saque for possivel retornar True}\par
+230 \par
+}
+}
+{\xe \v teste_deposito_Banco_saldo_esperado\:Banco_T}
+{\xe \v Banco_T\:teste_deposito_Banco_saldo_esperado}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_deposito_Banco_saldo_esperado (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 206     {\cf17 def }teste_deposito_Banco_saldo_esperado(self):\par
+207         valor_entrada = 20\par
+208         valor_esperado = 221\par
+209         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+210         banco = Banco(1,cliente,201,500)\par
+211         banco.depositar(20)\par
+212         self.assertEqual(banco.saldo,valor_esperado)\par
+213 \par
+214 \par
+215 \par
+}
+}
+{\xe \v teste_extrato_Banco_existe\:Banco_T}
+{\xe \v Banco_T\:teste_extrato_Banco_existe}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_extrato_Banco_existe (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 274     {\cf17 def }teste_extrato_Banco_existe(self):\par
+275         cliente = Cliente({\cf22 'Sthefany'},{\cf22 'Gomes de Sousa'},1)\par
+276         banco = Banco(1,cliente,201,500)\par
+277         banco.extrato\par
+278 \par
+}
+}
+{\xe \v teste_extrato_Banco_imprimir_historico\:Banco_T}
+{\xe \v Banco_T\:teste_extrato_Banco_imprimir_historico}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_extrato_Banco_imprimir_historico (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 286     {\cf17 def }teste_extrato_Banco_imprimir_historico(self):\par
+287         valor_entrada = 20\par
+288         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+289         banco = Banco(1,cliente,201,500)\par
+290         banco.extrato\par
+291         valor_esperado = [{\cf22 "tirou extrato - saldo de \{\}"}.format(banco.saldo)]\par
+292         self.assertEqual(banco.historico.transacoes,valor_esperado)\par
+293 \par
+294 {\cf20 #   *transferir}\par
+295 {\cf20 #       *entrada: destinatario, valor}\par
+296 {\cf20 #       *saida: depositar valor na outra conta}\par
+297 {\cf20 #           *Impe\'E7a caso o valor da transferencia for maior que o valor informado}\par
+298 \par
+299 \par
+}
+}
+{\xe \v teste_extrato_Banco_valor_esperado\:Banco_T}
+{\xe \v Banco_T\:teste_extrato_Banco_valor_esperado}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_extrato_Banco_valor_esperado (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 279     {\cf17 def }teste_extrato_Banco_valor_esperado(self):\par
+280         valor_entrada = 20\par
+281         valor_esperado = {\cf22 "numero: \{\} \\n \{\}"}.format(1,201)\par
+282         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+283         banco = Banco(1,cliente,201,500)\par
+284         self.assertEqual(banco.extrato,valor_esperado)\par
+285 \par
+}
+}
+{\xe \v teste_get_cpf_Cliente_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_get_cpf_Cliente_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_cpf_Cliente_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 91     {\cf17 def }teste_get_cpf_Cliente_da_saida(self):\par
+92         valor_entrada = [{\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1]         \par
+93         valor_esperado = 1      \par
+94         cliente = Cliente(valor_entrada[0],valor_entrada[1],valor_entrada[2])\par
+95         self.assertEqual(cliente.cpf,valor_esperado)\par
+96 \par
+}
+}
+{\xe \v teste_get_cpf_Cliente_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_get_cpf_Cliente_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_cpf_Cliente_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 87     {\cf17 def }teste_get_cpf_Cliente_exixte(self):\par
+88         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+89         cliente.cpf\par
+90     \par
+}
+}
+{\xe \v teste_get_limite_Banco_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_get_limite_Banco_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_limite_Banco_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 175     {\cf17 def }teste_get_limite_Banco_da_saida(self):\par
+176         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+177         banco = Banco(1,cliente,201,500)\par
+178         valor_entrada = [1,cliente,201,500]         \par
+179         valor_esperado = 500      \par
+180         self.assertEqual(banco.limite,valor_esperado)\par
+181 \par
+}
+}
+{\xe \v teste_get_limite_Banco_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_get_limite_Banco_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_limite_Banco_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 170     {\cf17 def }teste_get_limite_Banco_exixte(self):\par
+171         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+172         banco = Banco(1,cliente,201,500)\par
+173         banco.limite\par
+174     \par
+}
+}
+{\xe \v teste_get_nome_Cliente_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_get_nome_Cliente_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_nome_Cliente_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 49     {\cf17 def }teste_get_nome_Cliente_da_saida(self):\par
+50         valor_entrada = [{\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1]         \par
+51         valor_esperado = {\cf22 'Jeands'}      \par
+52         cliente = Cliente(valor_entrada[0],valor_entrada[1],valor_entrada[2])\par
+53         self.assertEqual(cliente.nome,valor_esperado)\par
+54 \par
+}
+}
+{\xe \v teste_get_nome_Cliente_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_get_nome_Cliente_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_nome_Cliente_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 45     {\cf17 def }teste_get_nome_Cliente_exixte(self):\par
+46         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+47         cliente.nome\par
+48     \par
+}
+}
+{\xe \v teste_get_numero_Banco_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_get_numero_Banco_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_numero_Banco_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 128     {\cf17 def }teste_get_numero_Banco_da_saida(self):\par
+129         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+130         banco = Banco(1,cliente,201,500)\par
+131         valor_entrada = [1,cliente,201,500]         \par
+132         valor_esperado = 1      \par
+133         self.assertEqual(banco.numero,valor_esperado)\par
+134 \par
+}
+}
+{\xe \v teste_get_numero_Banco_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_get_numero_Banco_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_numero_Banco_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 123     {\cf17 def }teste_get_numero_Banco_exixte(self):\par
+124         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+125         banco = Banco(1,cliente,201,500)\par
+126         banco.numero\par
+127     \par
+}
+}
+{\xe \v teste_get_saldo_Banco_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_get_saldo_Banco_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_saldo_Banco_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 164     {\cf17 def }teste_get_saldo_Banco_da_saida(self):\par
+165         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+166         banco = Banco(1,cliente,201,500)        \par
+167         valor_esperado = 201      \par
+168         self.assertEqual(banco.saldo,valor_esperado)\par
+169 \par
+}
+}
+{\xe \v teste_get_saldo_Banco_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_get_saldo_Banco_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_saldo_Banco_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 159     {\cf17 def }teste_get_saldo_Banco_exixte(self):\par
+160         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+161         banco = Banco(1,cliente,201,500)\par
+162         banco.saldo\par
+163     \par
+}
+}
+{\xe \v teste_get_sobrenome_Cliente_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_get_sobrenome_Cliente_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_sobrenome_Cliente_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 70     {\cf17 def }teste_get_sobrenome_Cliente_da_saida(self):\par
+71         valor_entrada = [{\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1]         \par
+72         valor_esperado = {\cf22 'Gomes de Sousa'}      \par
+73         cliente = Cliente(valor_entrada[0],valor_entrada[1],valor_entrada[2])\par
+74         self.assertEqual(cliente.sobrenome,valor_esperado)\par
+75 \par
+}
+}
+{\xe \v teste_get_sobrenome_Cliente_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_get_sobrenome_Cliente_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_sobrenome_Cliente_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 66     {\cf17 def }teste_get_sobrenome_Cliente_exixte(self):\par
+67         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+68         cliente.sobrenome\par
+69     \par
+}
+}
+{\xe \v teste_get_titular_Banco_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_get_titular_Banco_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_titular_Banco_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 153     {\cf17 def }teste_get_titular_Banco_da_saida(self):\par
+154         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+155         banco = Banco(1,cliente,201,500)        \par
+156         valor_esperado = cliente      \par
+157         self.assertEqual(banco.titular,valor_esperado)\par
+158 \par
+}
+}
+{\xe \v teste_get_titular_Banco_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_get_titular_Banco_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_titular_Banco_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 148     {\cf17 def }teste_get_titular_Banco_exixte(self):\par
+149         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+150         banco = Banco(1,cliente,201,500)\par
+151         banco.titular\par
+152     \par
+}
+}
+{\xe \v teste_get_total_contas_existe_Banco_Banco\:Banco_T}
+{\xe \v Banco_T\:teste_get_total_contas_existe_Banco_Banco}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_total_contas_existe_Banco_Banco (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 357     {\cf17 def }teste_get_total_contas_existe_Banco_Banco(self):\par
+358         cliente = Cliente({\cf22 'Sthefany'},{\cf22 'Gomes de Sousa'},1)\par
+359         banco_0 = Banco(1,cliente,201,500)\par
+360         banco_1 = Banco(1,cliente,201,500)\par
+361         Banco.get_total_contas()\par
+362 \par
+363 {\cf20 #    def teste_get_total_contas_Banco_Banco_retorn_2(self):  }\par
+364 {\cf20 #        cliente = Cliente('Sthefany','Gomes de Sousa',1)}\par
+365 {\cf20 #        banco_0 = Banco(1,cliente,201,500)}\par
+366 {\cf20 #        banco_1 = Banco(1,cliente,201,500)}\par
+367 {\cf20 #        valor_esperado = 2}\par
+368 {\cf20 #        self.assertEqual(banco_0.get_total_contas(),valor_esperado)}\par
+369     \par
+370 {\cf20 #Como fazer testes com methodos estaticos ??}\par
+371 \par
+372 \par
+373 \par
+}
+}
+{\xe \v teste_get_total_contas_existe_Banco_banco_0\:Banco_T}
+{\xe \v Banco_T\:teste_get_total_contas_existe_Banco_banco_0}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_get_total_contas_existe_Banco_banco_0 (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 344     {\cf17 def }teste_get_total_contas_existe_Banco_banco_0(self):\par
+345        cliente = Cliente({\cf22 'Sthefany'},{\cf22 'Gomes de Sousa'},1)\par
+346        banco_0 = Banco(1,cliente,201,500)\par
+347        banco_1 = Banco(1,cliente,201,500)\par
+348        banco_0.get_total_contas()\par
+349 \par
+350 {\cf20 #    def teste_get_total_contas_Banco_banco_0_retorn_2(self):  }\par
+351 {\cf20 #        cliente = Cliente('Sthefany','Gomes de Sousa',1)}\par
+352 {\cf20 #        banco_0 = Banco(1,cliente,201,500)}\par
+353 {\cf20 #        banco_1 = Banco(1,cliente,201,500)}\par
+354 {\cf20 #        valor_esperado = 2}\par
+355 {\cf20 #        self.assertEqual(banco_0.get_total_contas(),valor_esperado)}\par
+356 \par
+}
+}
+{\xe \v teste_Historico_existe\:Banco_T}
+{\xe \v Banco_T\:teste_Historico_existe}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_Historico_existe (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 31     {\cf17 def }teste_Historico_existe(self):\par
+32         historico = Historico()\par
+33 \par
+34 {\cf20 #   Criar uma classe Cliente}\par
+35 {\cf20 #       *entrada: nome, sobrenome, cpf}\par
+36 \par
+37 \par
+}
+}
+{\xe \v teste_saca_Banco_imprimir_historico\:Banco_T}
+{\xe \v Banco_T\:teste_saca_Banco_imprimir_historico}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_saca_Banco_imprimir_historico (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 258     {\cf17 def }teste_saca_Banco_imprimir_historico(self):\par
+259         valor_entrada = 20\par
+260         valor_esperado = [{\cf22 "saque de \{\}"}.format(valor_entrada)]\par
+261         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+262         banco = Banco(1,cliente,201,500)\par
+263         banco.sacar(20)\par
+264         self.assertEqual(banco.historico.transacoes,valor_esperado)\par
+265 \par
+266 \par
+267 {\cf20 #    }\par
+268 {\cf20 #    *extrato;}\par
+269 {\cf20 #        *imprime a seguinte informa\'E7\'E3o:}\par
+270 {\cf20 #            *"numero: \{\} \\n \{\}".format(self.numero, self.saldo)}\par
+271 {\cf20 #    }\par
+272 {\cf20 #    }\par
+273 \par
+}
+}
+{\xe \v teste_saca_Banco_saldo_esperado\:Banco_T}
+{\xe \v Banco_T\:teste_saca_Banco_saldo_esperado}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_saca_Banco_saldo_esperado (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 250     {\cf17 def }teste_saca_Banco_saldo_esperado(self):\par
+251         valor_entrada = 20\par
+252         valor_esperado = 181\par
+253         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+254         banco = Banco(1,cliente,201,500)\par
+255         banco.sacar(20)\par
+256         self.assertEqual(banco.saldo,valor_esperado)\par
+257 \par
+}
+}
+{\xe \v teste_saca_Banco_valor_False\:Banco_T}
+{\xe \v Banco_T\:teste_saca_Banco_valor_False}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_saca_Banco_valor_False (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 243     {\cf17 def }teste_saca_Banco_valor_False(self):\par
+244         valor_entrada = 20\par
+245         valor_esperado = {\cf17 False}\par
+246         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+247         banco = Banco(1,cliente,19,500)\par
+248         self.assertEqual(banco.sacar(20),valor_esperado)\par
+249 \par
+}
+}
+{\xe \v teste_saca_Banco_valor_True\:Banco_T}
+{\xe \v Banco_T\:teste_saca_Banco_valor_True}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_saca_Banco_valor_True (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 236     {\cf17 def }teste_saca_Banco_valor_True(self):\par
+237         valor_entrada = 20\par
+238         valor_esperado = {\cf17 True}\par
+239         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+240         banco = Banco(1,cliente,201,500)\par
+241         self.assertEqual(banco.sacar(20),valor_esperado)\par
+242 \par
+}
+}
+{\xe \v teste_sacar_Banco_existe\:Banco_T}
+{\xe \v Banco_T\:teste_sacar_Banco_existe}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_sacar_Banco_existe (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 231     {\cf17 def }teste_sacar_Banco_existe(self):\par
+232         cliente = Cliente({\cf22 'Sthefany'},{\cf22 'Gomes de Sousa'},1)\par
+233         banco = Banco(1,cliente,201,500)\par
+234         banco.sacar(20)\par
+235 \par
+}
+}
+{\xe \v teste_set_cpf_Cliente_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_set_cpf_Cliente_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_cpf_Cliente_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 97     {\cf17 def }teste_set_cpf_Cliente_exixte(self):\par
+98         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+99         cliente.cpf = 3\par
+100     \par
+}
+}
+{\xe \v teste_set_cpf_get_Cliente_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_set_cpf_get_Cliente_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_cpf_get_Cliente_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 101     {\cf17 def }teste_set_cpf_get_Cliente_da_saida(self):\par
+102         valor_entrada = [{\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1]         \par
+103         valor_esperado = 3      \par
+104         cliente = Cliente(valor_entrada[0],valor_entrada[1],valor_entrada[2])\par
+105         cliente.cpf = valor_esperado\par
+106         self.assertEqual(cliente.cpf,valor_esperado)\par
+107 \par
+108 \par
+109 \par
+110 {\cf20 #Construa a classe Conta com:}\par
+111 {\cf20 #    *Class conta}\par
+112 {\cf20 #    *Os atributos numero,}\par
+113 {\cf20 #    *titular, vai receer uma instancia cliente}\par
+114 {\cf20 #    *saldo e }\par
+115 {\cf20 #    *limite. dar limite padr\'E3o de 1000 rs}\par
+116 \par
+}
+}
+{\xe \v teste_set_limite_Banco_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_set_limite_Banco_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_limite_Banco_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 187     {\cf17 def }teste_set_limite_Banco_da_saida(self):\par
+188         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)         \par
+189         banco = Banco(1,cliente,201,500)\par
+190         valor_entrada = 700\par
+191         valor_esperado = 700     \par
+192         banco.limite = valor_entrada\par
+193         self.assertEqual(banco.limite,valor_esperado)\par
+194 \par
+195 \par
+196 \par
+197 {\cf20 #}\par
+198 {\cf20 #    *Os m\'E9todos deposita, }\par
+199 {\cf20 #        *acrescenta o Valor ao self.saldo}\par
+200 \par
+}
+}
+{\xe \v teste_set_limite_Banco_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_set_limite_Banco_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_limite_Banco_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 182     {\cf17 def }teste_set_limite_Banco_exixte(self):\par
+183         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+184         banco = Banco(1,cliente,201,500)\par
+185         banco.limite = 700\par
+186     \par
+}
+}
+{\xe \v teste_set_nome_Cliente_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_set_nome_Cliente_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_nome_Cliente_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 59     {\cf17 def }teste_set_nome_Cliente_da_saida(self):\par
+60         valor_entrada = [{\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1]         \par
+61         valor_esperado = {\cf22 'Aphonso'}      \par
+62         cliente = Cliente(valor_entrada[0],valor_entrada[1],valor_entrada[2])\par
+63         cliente.nome = valor_esperado\par
+64         self.assertEqual(cliente.nome,valor_esperado)\par
+65 \par
+}
+}
+{\xe \v teste_set_nome_Cliente_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_set_nome_Cliente_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_nome_Cliente_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 55     {\cf17 def }teste_set_nome_Cliente_exixte(self):\par
+56         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+57         cliente.nome = {\cf22 'Aphonso'}\par
+58     \par
+}
+}
+{\xe \v teste_set_numero_Banco_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_set_numero_Banco_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_numero_Banco_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 140     {\cf17 def }teste_set_numero_Banco_da_saida(self):\par
+141         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)         \par
+142         banco = Banco(1,cliente,201,500)\par
+143         valor_entrada = 2\par
+144         valor_esperado = 2      \par
+145         banco.numero = valor_esperado\par
+146         self.assertEqual(banco.numero,valor_esperado)\par
+147 \par
+}
+}
+{\xe \v teste_set_numero_Banco_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_set_numero_Banco_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_numero_Banco_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 135     {\cf17 def }teste_set_numero_Banco_exixte(self):\par
+136         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+137         banco = Banco(1,cliente,201,500)\par
+138         banco.numero = {\cf22 'Aphonso'}\par
+139     \par
+}
+}
+{\xe \v teste_set_sobrenome_Cliente_da_saida\:Banco_T}
+{\xe \v Banco_T\:teste_set_sobrenome_Cliente_da_saida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_sobrenome_Cliente_da_saida (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 80     {\cf17 def }teste_set_sobrenome_Cliente_da_saida(self):\par
+81         valor_entrada = [{\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1]         \par
+82         valor_esperado = {\cf22 'Aphonso'}      \par
+83         cliente = Cliente(valor_entrada[0],valor_entrada[1],valor_entrada[2])\par
+84         cliente.sobrenome = valor_esperado\par
+85         self.assertEqual(cliente.sobrenome,valor_esperado)\par
+86 \par
+}
+}
+{\xe \v teste_set_sobrenome_Cliente_exixte\:Banco_T}
+{\xe \v Banco_T\:teste_set_sobrenome_Cliente_exixte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_set_sobrenome_Cliente_exixte (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 76     {\cf17 def }teste_set_sobrenome_Cliente_exixte(self):\par
+77         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+78         cliente.sobrenome = {\cf22 'Aphonso'}\par
+79     \par
+}
+}
+{\xe \v teste_transferir_Banco_existe\:Banco_T}
+{\xe \v Banco_T\:teste_transferir_Banco_existe}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_transferir_Banco_existe (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 300     {\cf17 def }teste_transferir_Banco_existe(self):\par
+301         cliente_0 = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+302         banco_0 = Banco(1,cliente_0,201,500)\par
+303         cliente_1 = Cliente({\cf22 'Sthefany'},{\cf22 'Gomes de Sousa'},1)\par
+304         banco_1 = Banco(2,cliente_1,200,500)\par
+305         banco_0.transferir(banco_1,10)\par
+306     \par
+}
+}
+{\xe \v teste_transferir_Banco_imprimir_historico\:Banco_T}
+{\xe \v Banco_T\:teste_transferir_Banco_imprimir_historico}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_transferir_Banco_imprimir_historico (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 333     {\cf17 def }teste_transferir_Banco_imprimir_historico(self):\par
+334         valor_entrada = 20  \par
+335         cliente = Cliente({\cf22 'Sthefany'},{\cf22 'Gomes de Sousa'},1)\par
+336         banco_0 = Banco(1,cliente,201,500)\par
+337         banco_1 = Banco(1,cliente,201,500)\par
+338         banco_0.transferir(banco_1,20)\par
+339         valor_esperado = [{\cf22 "transferencia de \{\} para conta \{\}"}.format(valor_entrada, banco_1.numero)]\par
+340         self.assertEqual(banco_0.historico.transacoes,valor_esperado)\par
+341 \par
+342 {\cf20 #Testes para atributos de classes}\par
+343 \par
+}
+}
+{\xe \v teste_trasferir_Banco_False\:Banco_T}
+{\xe \v Banco_T\:teste_trasferir_Banco_False}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_trasferir_Banco_False (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 315     {\cf17 def }teste_trasferir_Banco_False(self):\par
+316         valor_entrada = 20\par
+317         valor_esperado = {\cf17 False}\par
+318         cliente = Cliente({\cf22 'Sthefany'},{\cf22 'Gomes de Sousa'},1)\par
+319         banco_0 = Banco(1,cliente,19,500)\par
+320         banco_1 = Banco(1,cliente,201,500)\par
+321         self.assertEqual(banco_0.transferir(banco_1,20),valor_esperado)\par
+322 \par
+323 \par
+}
+}
+{\xe \v teste_trasferir_Banco_True\:Banco_T}
+{\xe \v Banco_T\:teste_trasferir_Banco_True}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_trasferir_Banco_True (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 307     {\cf17 def }teste_trasferir_Banco_True(self):\par
+308         valor_entrada = 20\par
+309         valor_esperado = {\cf17 True}\par
+310         cliente = Cliente({\cf22 'Jeands'},{\cf22 'Gomes de Sousa'},1)\par
+311         banco_0 = Banco(1,cliente,201,500)\par
+312         banco_1 = Banco(1,cliente,201,500)\par
+313         self.assertEqual(banco_0.transferir(banco_1,20),valor_esperado)\par
+314 \par
+}
+}
+{\xe \v teste_trasferir_Banco_valor_esperado\:Banco_T}
+{\xe \v Banco_T\:teste_trasferir_Banco_valor_esperado}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco_T.teste_trasferir_Banco_valor_esperado (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 324     {\cf17 def }teste_trasferir_Banco_valor_esperado(self):\par
+325         valor_entrada = 20\par
+326         valor_esperado = [181,221]\par
+327         cliente = Cliente({\cf22 'Sthefany'},{\cf22 'Gomes de Sousa'},1)\par
+328         banco_0 = Banco(1,cliente,201,500)\par
+329         banco_1 = Banco(2,cliente,201,500)\par
+330         banco_0.transferir(banco_1,20)\par
+331         self.assertEqual([banco_0.saldo,banco_1.saldo],valor_esperado)\par
+332 \par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Ref\'EAncia do Namespace cadastro\par \pard\plain 
+{\tc\tcl2 \v cadastro}
+{\xe \v cadastro}
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Cadastro}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Ref\'EAncia do Namespace main_servidore\par \pard\plain 
+{\tc\tcl2 \v main_servidore}
+{\xe \v main_servidore}
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+{\xe \v main\:main_servidore}
+{\xe \v main_servidore\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def main_servidore.main ()}}
+\par
+{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 3 {\cf17 def }main():\par
+4     servidor = Servidor()\par
+5     servidor.ligar_servidor()\par
+6 \par
+7 \par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Ref\'EAncia do Namespace servidor\par \pard\plain 
+{\tc\tcl2 \v servidor}
+{\xe \v servidor}
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Servidor}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Ref\'EAncia do Namespace t_servidor\par \pard\plain 
+{\tc\tcl2 \v t_servidor}
+{\xe \v t_servidor}
+{\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Classes{\tc \v Classes}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia da Classe Banco.Banco\par \pard\plain 
+{\tc\tcl2 \v Banco.Banco}
+{\xe \v Banco.Banco}
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Membros P\'FAblicos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b __init__} (self, {\b numero}, cliente, {\b saldo}, {\b limite})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b saldo} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b historico} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b numero} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b numero} (self, numero)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b limite} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b limite} (self, valor)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b depositar} (self, valor)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b titular} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b sacar} (self, valor)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b transferir} (self, destino, valor)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b extrato} (self)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Membros P\'FAblicos Est\'E1ticos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b get_total_contas} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Construtores e Destrutores\par
+\pard\plain 
+{\xe \v __init__\:Banco.Banco}
+{\xe \v Banco.Banco\:__init__}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.__init__ (  {\i self},   {\i numero},   {\i cliente},   {\i saldo},   {\i limite})}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 112     {\cf17 def }__init__(self,numero,cliente,saldo,limite):\par
+113         self._numero = numero\par
+114         self._titular = cliente\par
+115         self._saldo = saldo\par
+116         self._limite = limite\par
+117         {\cf20 # como fazer o teste de historico}\par
+118         self._historico = Historico()\par
+119         Banco._total_contas += 1\par
+120 \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es membros\par
+\pard\plain 
+{\xe \v depositar\:Banco.Banco}
+{\xe \v Banco.Banco\:depositar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.depositar (  {\i self},   {\i valor})}}
+\par
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Um valor so pode ser somado ao saldo do cliente se esse valor for maior que 0 e n\'E3o ultrapassar o limite.\par
+    :Parametro valor: A quantidade a ser somado no saldo\par
+    :tipo valor: float\par
+    :return: bool\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 163     {\cf17 def }depositar(self,valor):\par
+164         {\cf22 '''}\par
+165 {\cf22             Um valor so pode ser somado ao saldo do cliente se esse valor for maior que 0 e n\'E3o ultrapassar o limite.}\par
+166 {\cf22             :Parametro valor: A quantidade a ser somado no saldo}\par
+167 {\cf22             :tipo valor: float}\par
+168 {\cf22             :return: bool}\par
+169 {\cf22         '''}\par
+170         {\cf19 if} (self.saldo+valor > self.limite {\cf19 and} valor > 0):\par
+171             {\cf19 return} {\cf17 False}\par
+172         {\cf19 else}:\par
+173             self._saldo += valor\par
+174             self._historico.transacoes.append({\cf22 "deposito de \{\}"}.format(valor))\par
+175             {\cf19 return} {\cf17 True}\par
+176     \par
+}
+}
+{\xe \v extrato\:Banco.Banco}
+{\xe \v Banco.Banco\:extrato}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.extrato (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna uma str com numero da conta e saldo.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 214     {\cf17 def }extrato(self):\par
+215         {\cf22 '''}\par
+216 {\cf22             retorna uma str com numero da conta e saldo.}\par
+217 {\cf22         '''}\par
+218         self._historico.transacoes.append({\cf22 "tirou extrato - saldo de \{\}"}.format(self.saldo))\par
+219         {\cf19 return} {\cf22 "numero: \{\} \\n \{\}"}.format(self._numero,self._saldo)\par
+220 \par
+}
+}
+{\xe \v get_total_contas\:Banco.Banco}
+{\xe \v Banco.Banco\:get_total_contas}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.get_total_contas (){\f2 [static]}}}
+\par
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna o numero de contas cadastradas no banco.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 222     {\cf17 def }get_total_contas():\par
+223         {\cf22 '''}\par
+224 {\cf22             retorna o numero de contas cadastradas no banco.}\par
+225 {\cf22         '''}\par
+226         {\cf19 return} Banco._total_contas\par
+}
+}
+{\xe \v historico\:Banco.Banco}
+{\xe \v Banco.Banco\:historico}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.historico (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna o historico da conta.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 129     {\cf17 def }historico(self):\par
+130         {\cf22 '''}\par
+131 {\cf22             retorna o historico da conta.}\par
+132 {\cf22         '''}\par
+133         {\cf19 return} self._historico\par
+134 \par
+}
+}
+{\xe \v limite\:Banco.Banco}
+{\xe \v Banco.Banco\:limite}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.limite (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna o limite da conta.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 150     {\cf17 def }limite(self):\par
+151         {\cf22 '''}\par
+152 {\cf22             retorna o limite da conta.}\par
+153 {\cf22         '''}\par
+154         {\cf19 return} self._limite\par
+155 \par
+}
+}
+{\xe \v limite\:Banco.Banco}
+{\xe \v Banco.Banco\:limite}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.limite (  {\i self},   {\i valor})}}
+\par
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     atribui o limite da conta.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 157     {\cf17 def }limite(self,valor):\par
+158         {\cf22 '''}\par
+159 {\cf22             atribui o limite da conta.}\par
+160 {\cf22         '''}\par
+161         self._limite = valor\par
+162 \par
+}
+}
+{\xe \v numero\:Banco.Banco}
+{\xe \v Banco.Banco\:numero}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.numero (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna o numero da conta.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 136     {\cf17 def }numero(self):\par
+137         {\cf22 '''}\par
+138 {\cf22             retorna o numero da conta.}\par
+139 {\cf22         '''}\par
+140         {\cf19 return} self._numero\par
+141 \par
+}
+}
+{\xe \v numero\:Banco.Banco}
+{\xe \v Banco.Banco\:numero}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.numero (  {\i self},   {\i numero})}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     atribui o numero da conta.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 143     {\cf17 def }numero(self,numero):\par
+144         {\cf22 '''}\par
+145 {\cf22             atribui o numero da conta.}\par
+146 {\cf22         '''}\par
+147         self._numero = numero\par
+148 \par
+}
+}
+{\xe \v sacar\:Banco.Banco}
+{\xe \v Banco.Banco\:sacar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.sacar (  {\i self},   {\i valor})}}
+\par
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Um valor s\'F3 pode ser retirado do saldo se for maior que 0 e o saldo for maior que o valor informado.\par
+    :Parametro valor: A quantidade a ser subtraido no saldo\par
+    :tipo valor: float\par
+    :return: bool\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 184     {\cf17 def }sacar(self,valor):\par
+185         {\cf22 '''}\par
+186 {\cf22             Um valor s\'F3 pode ser retirado do saldo se for maior que 0 e o saldo for maior que o valor informado.}\par
+187 {\cf22             :Parametro valor: A quantidade a ser subtraido no saldo}\par
+188 {\cf22             :tipo valor: float}\par
+189 {\cf22             :return: bool}\par
+190 {\cf22         '''}\par
+191         if(valor <= self._saldo {\cf19 and} valor > 0):\par
+192             self._saldo -= valor\par
+193             self._historico.transacoes.append({\cf22 "saque de \{\}"}.format(valor))\par
+194             {\cf19 return} {\cf17 True}\par
+195         {\cf19 return} {\cf17 False}\par
+196 \par
+197     \par
+}
+}
+{\xe \v saldo\:Banco.Banco}
+{\xe \v Banco.Banco\:saldo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.saldo (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna o saldo da conta.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 122     {\cf17 def }saldo(self):\par
+123         {\cf22 '''}\par
+124 {\cf22             retorna o saldo da conta.}\par
+125 {\cf22         '''}\par
+126         {\cf19 return} self._saldo\par
+127 \par
+}
+}
+{\xe \v titular\:Banco.Banco}
+{\xe \v Banco.Banco\:titular}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.titular (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna o titular da conta.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 178     {\cf17 def }titular(self):\par
+179         {\cf22 '''}\par
+180 {\cf22             retorna o titular da conta.}\par
+181 {\cf22         '''}\par
+182         {\cf19 return} self._titular\par
+183 \par
+}
+}
+{\xe \v transferir\:Banco.Banco}
+{\xe \v Banco.Banco\:transferir}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Banco.transferir (  {\i self},   {\i destino},   {\i valor})}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Um valor s\'F3 pode ser transferido se o saldo do atual cliente possuir saldo.\par
+    :Parametro destino: A conta destino que ira receber a quantia.\par
+    :tipo destino: Banco\par
+    :Parametro valor: A quantidade a ser somado no saldo da conta destino e subrtraido da conta remetente.\par
+    :tipo: float.\par
+    :return:bool.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 198     {\cf17 def }transferir(self,destino,valor):\par
+199         {\cf22 '''}\par
+200 {\cf22             Um valor s\'F3 pode ser transferido se o saldo do atual cliente possuir saldo.}\par
+201 {\cf22             :Parametro destino: A conta destino que ira receber a quantia.}\par
+202 {\cf22             :tipo destino: Banco}\par
+203 {\cf22             :Parametro valor: A quantidade a ser somado no saldo da conta destino e subrtraido da conta remetente.}\par
+204 {\cf22             :tipo: float.}\par
+205 {\cf22             :return:bool.}\par
+206 {\cf22         '''}\par
+207         if(self.sacar(valor)):\par
+208             destino.depositar(valor)\par
+209             self._historico.transacoes[len(self._historico.transacoes)-1] = {\cf22 "transferencia de \{\} para conta \{\}"}.format(valor, destino.numero)\par
+210             {\cf19 return} {\cf17 True}\par
+211         {\cf19 return} {\cf17 False}\par
+212 \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+A documenta\'E7\'E3o para essa classe foi gerada a partir do seguinte arquivo:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b Banco.py}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia da Classe cadastro.Cadastro\par \pard\plain 
+{\tc\tcl2 \v cadastro.Cadastro}
+{\xe \v cadastro.Cadastro}
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Membros P\'FAblicos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b __init__} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b lista_contas} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b cadastra} (self, pessoa)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b busca} (self, cpf)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descri\'E7\'E3o detalhada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     O objetivo da class Cadastro conter as contas criadas.\par
+    Todos as informa\'E7\'F5es do objeto s\'E3o inicializados e deixados vazios at\'E9 ser adicionado informa\'E7\'F5es.\par
+}
+ \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Construtores e Destrutores\par
+\pard\plain 
+{\xe \v __init__\:cadastro.Cadastro}
+{\xe \v cadastro.Cadastro\:__init__}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def cadastro.Cadastro.__init__ (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 8     {\cf17 def }__init__(self):\par
+9         self._lista=[]\par
+10 \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es membros\par
+\pard\plain 
+{\xe \v busca\:cadastro.Cadastro}
+{\xe \v cadastro.Cadastro\:busca}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def cadastro.Cadastro.busca (  {\i self},   {\i cpf})}}
+\par
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para buscar o objeto do tipo Banco por meio do cpf passado por parametro\par
+\par
+    :parametro cpf: inteiro que representa o da conta cadastrada.\par
+    :retorna Retorna a conta que possui o cpf que foi passado por parametro, caso a conta n\'E3o seja encontrada retornara o valor None.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 32     {\cf17 def }busca(self,cpf):\par
+33         {\cf22 '''}\par
+34 {\cf22             Para buscar o objeto do tipo Banco por meio do cpf passado por parametro}\par
+35 {\cf22 }\par
+36 {\cf22             :parametro cpf: inteiro que representa o da conta cadastrada.}\par
+37 {\cf22             :retorna Retorna a conta que possui o cpf que foi passado por parametro, caso a conta n\'E3o seja encontrada retornara o valor None.}\par
+38 {\cf22         '''}\par
+39         confere={\cf18 None}\par
+40         {\cf19 for} x {\cf19 in} self._lista:\par
+41             {\cf19 if} x.titular.cpf==cpf:\par
+42                 confere=x\par
+43                 {\cf19 break}\par
+44         {\cf19 return} confere\par
+}
+}
+{\xe \v cadastra\:cadastro.Cadastro}
+{\xe \v cadastro.Cadastro\:cadastra}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def cadastro.Cadastro.cadastra (  {\i self},   {\i pessoa})}}
+\par
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para as cadastrar as contontas \'E9 passado por parametros um objeto Banco\par
+\par
+    :parametro pessoa: objeto de class Banco.\par
+    :retorna True casoa  conta for cadastrada e False caso a conta n\'E3o seja cadastrada.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 18     {\cf17 def }cadastra(self,pessoa):\par
+19         {\cf22 '''}\par
+20 {\cf22             Para as cadastrar as contontas \'E9 passado por parametros um objeto Banco}\par
+21 {\cf22 }\par
+22 {\cf22             :parametro pessoa: objeto de class Banco.}\par
+23 {\cf22             :retorna True casoa  conta for cadastrada e False caso a conta n\'E3o seja cadastrada.}\par
+24 {\cf22         '''}\par
+25         confere=self.busca(pessoa.titular.cpf)\par
+26         i={\cf17 False}\par
+27         {\cf19 if} confere== {\cf18 None}:\par
+28             self._lista.append(pessoa)\par
+29             i={\cf17 True}\par
+30         {\cf19 return} i\par
+31 \par
+}
+}
+{\xe \v lista_contas\:cadastro.Cadastro}
+{\xe \v cadastro.Cadastro\:lista_contas}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def cadastro.Cadastro.lista_contas (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna a lista de conta cadastradas.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 12     {\cf17 def }lista_contas(self):\par
+13         {\cf22 '''}\par
+14 {\cf22             retorna a lista de conta cadastradas.}\par
+15 {\cf22         '''}\par
+16         {\cf19 return} self._lista\par
+17     \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+A documenta\'E7\'E3o para essa classe foi gerada a partir do seguinte arquivo:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b cadastro.py}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia da Classe Banco.Cliente\par \pard\plain 
+{\tc\tcl2 \v Banco.Cliente}
+{\xe \v Banco.Cliente}
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Membros P\'FAblicos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b __init__} (self, {\b nome}, {\b sobrenome}, {\b cpf})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b nome} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b nome} (self, nome)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b sobrenome} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b sobrenome} (self, sobrenome)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b cpf} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b cpf} (self, cpf)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descri\'E7\'E3o detalhada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     O objeto Cliente possui um cliente.\par
+    :paramentro nome: O paramentro \'E9 usado para obter o nome do cliente\par
+    :tipo nome: str\par
+    :paramentro sobrenome: O paramentro \'E9 usado para obter o sobrenome do cliente\par
+    :tipo sobrenome: str\par
+    :paramentro cpf: O paramentro \'E9 usado para obter o cpf do cliente\par
+    :tipo nome: str\par
+}
+ \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Construtores e Destrutores\par
+\pard\plain 
+{\xe \v __init__\:Banco.Cliente}
+{\xe \v Banco.Cliente\:__init__}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Cliente.__init__ (  {\i self},   {\i nome},   {\i sobrenome},   {\i cpf})}}
+\par
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 16     {\cf17 def }__init__(self,nome,sobrenome,cpf):\par
+17         self._nome = nome\par
+18         self._sobrenome = sobrenome\par
+19         self._cpf = cpf\par
+20 \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es membros\par
+\pard\plain 
+{\xe \v cpf\:Banco.Cliente}
+{\xe \v Banco.Cliente\:cpf}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Cliente.cpf (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna o cpf\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 50     {\cf17 def }cpf(self):\par
+51         {\cf22 '''}\par
+52 {\cf22             retorna o cpf}\par
+53 {\cf22         '''}\par
+54         {\cf19 return} self._cpf\par
+55     \par
+}
+}
+{\xe \v cpf\:Banco.Cliente}
+{\xe \v Banco.Cliente\:cpf}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Cliente.cpf (  {\i self},   {\i cpf})}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     atribui a informa\'E7ao ao cpf\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 57     {\cf17 def }cpf(self,cpf):\par
+58         {\cf22 '''}\par
+59 {\cf22             atribui a informa\'E7ao ao cpf}\par
+60 {\cf22         '''}\par
+61         self._cpf = cpf\par
+62 \par
+63 \par
+64 \par
+}
+}
+{\xe \v nome\:Banco.Cliente}
+{\xe \v Banco.Cliente\:nome}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Cliente.nome (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna o nome\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 22     {\cf17 def }nome(self):\par
+23         {\cf22 '''}\par
+24 {\cf22             retorna o nome}\par
+25 {\cf22         '''}\par
+26         {\cf19 return} self._nome\par
+27     \par
+}
+}
+{\xe \v nome\:Banco.Cliente}
+{\xe \v Banco.Cliente\:nome}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Cliente.nome (  {\i self},   {\i nome})}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     atribui a informa\'E7ao ao nome\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 29     {\cf17 def }nome(self,nome):\par
+30         {\cf22 '''}\par
+31 {\cf22             atribui a informa\'E7ao ao nome}\par
+32 {\cf22         '''}\par
+33         self._nome = nome\par
+34 \par
+}
+}
+{\xe \v sobrenome\:Banco.Cliente}
+{\xe \v Banco.Cliente\:sobrenome}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Cliente.sobrenome (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna o sobrenome\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 36     {\cf17 def }sobrenome(self):\par
+37         {\cf22 '''}\par
+38 {\cf22             retorna o sobrenome}\par
+39 {\cf22         '''}\par
+40         {\cf19 return} self._sobrenome\par
+41     \par
+}
+}
+{\xe \v sobrenome\:Banco.Cliente}
+{\xe \v Banco.Cliente\:sobrenome}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Cliente.sobrenome (  {\i self},   {\i sobrenome})}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     atribui a informa\'E7ao ao sobrenome\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 43     {\cf17 def }sobrenome(self,sobrenome):\par
+44         {\cf22 '''}\par
+45 {\cf22             atribui a informa\'E7ao ao sobrenome}\par
+46 {\cf22         '''}\par
+47         self._sobrenome = sobrenome\par
+48 \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+A documenta\'E7\'E3o para essa classe foi gerada a partir do seguinte arquivo:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b Banco.py}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia da Classe Banco.Historico\par \pard\plain 
+{\tc\tcl2 \v Banco.Historico}
+{\xe \v Banco.Historico}
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Membros P\'FAblicos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b __init__} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b transacoes} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b imprime} (self)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Construtores e Destrutores\par
+\pard\plain 
+{\xe \v __init__\:Banco.Historico}
+{\xe \v Banco.Historico\:__init__}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Historico.__init__ (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 72     {\cf17 def }__init__(self):\par
+73         self._data_abertura = datetime.datetime.today()\par
+74         self._transacoes = []\par
+75     \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es membros\par
+\pard\plain 
+{\xe \v imprime\:Banco.Historico}
+{\xe \v Banco.Historico\:imprime}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Historico.imprime (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Exibe todas as transa\'E7\'F5es feitas pelo cliente em sua conta.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 83     {\cf17 def }imprime(self):\par
+84         {\cf22 '''}\par
+85 {\cf22             Exibe todas as transa\'E7\'F5es feitas pelo cliente em sua conta.}\par
+86 {\cf22         '''}\par
+87         print({\cf22 "imprime a data de abertura: \{\}"}.format(self._data_abertura))\par
+88         print({\cf22 "transa\'E7\'F5es: "})\par
+89         {\cf19 for} opera\'E7\'E3o {\cf19 in} self._transacoes:\par
+90             print({\cf22 "."},opera\'E7\'E3o)\par
+91 \par
+}
+}
+{\xe \v transacoes\:Banco.Historico}
+{\xe \v Banco.Historico\:transacoes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def Banco.Historico.transacoes (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     retorna as transa\'E7\'F5es feitas por um cliente.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 77     {\cf17 def }transacoes(self):\par
+78         {\cf22 '''}\par
+79 {\cf22             retorna as transa\'E7\'F5es feitas por um cliente.}\par
+80 {\cf22         '''}\par
+81         {\cf19 return} self._transacoes\par
+82 \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+A documenta\'E7\'E3o para essa classe foi gerada a partir do seguinte arquivo:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b Banco.py}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia da Classe servidor.Servidor\par \pard\plain 
+{\tc\tcl2 \v servidor.Servidor}
+{\xe \v servidor.Servidor}
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Membros P\'FAblicos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b __init__} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b mostrar_todas_contas} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b pre_processamento} (self, codigo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b cadastrar} (self, codigo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b login} (self, codigo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b deposito} (self, codigo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b saque} (self, codigo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b transferencia} (self, codigo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b historico} (self, codigo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b ligar_servidor} (self)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descri\'E7\'E3o detalhada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     O objeto da class Servidor representar a interface de conec\'E7\'E3o do servido com o cliente.\par
+    Todos as informa\'E7\'F5es do objeto s\'E3o inicializados e inicializando um objeto do tipo cadastro\par
+    um contador de contas cadastradas.\par
+}
+ \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Construtores e Destrutores\par
+\pard\plain 
+{\xe \v __init__\:servidor.Servidor}
+{\xe \v servidor.Servidor\:__init__}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.__init__ (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 15     {\cf17 def }__init__(self):\par
+16         self._cadastro = Cadastro()\par
+17         self._n_conta = 0\par
+18 \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es membros\par
+\pard\plain 
+{\xe \v cadastrar\:servidor.Servidor}
+{\xe \v servidor.Servidor\:cadastrar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.cadastrar (  {\i self},   {\i codigo})}}
+\par
+{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para realizar o cadastro da conta utilizando as informa\'E7\'F5es do codigo recebido pelo cliente e tratado.\par
+\par
+    :parametro codigo: lista com informa\'E7\'F5es para cadastro de conta.\par
+    :retorna uma string com '1' para conta realizada, e '0' para conta n\'E3o realizada.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 62     {\cf17 def }cadastrar(self,codigo):\par
+63         {\cf22 '''}\par
+64 {\cf22             Para realizar o cadastro da conta utilizando as informa\'E7\'F5es do codigo recebido pelo cliente e tratado.}\par
+65 {\cf22 }\par
+66 {\cf22             :parametro codigo: lista com informa\'E7\'F5es para cadastro de conta.}\par
+67 {\cf22             :retorna uma string com '1' para conta realizada, e '0' para conta n\'E3o realizada.}\par
+68 {\cf22         '''}\par
+69 \par
+70         pessoa = Cliente(codigo[1],codigo[2],codigo[3])\par
+71         conta = Banco(self._n_conta,pessoa,0.0,1000)\par
+72         self._n_conta =+ 1\par
+73         if(self._cadastro.cadastra(conta)):\par
+74             {\cf19 return} {\cf22 '1'}\par
+75         {\cf19 return} {\cf22 '0'} \par
+76 \par
+}
+}
+{\xe \v deposito\:servidor.Servidor}
+{\xe \v servidor.Servidor\:deposito}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.deposito (  {\i self},   {\i codigo})}}
+\par
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para realizar um deposito, incrementar o valor informado pelo cliente, no saldo da \par
+    conta solicitada.\par
+\par
+    :parametro codigo: lista com informa\'E7\'F5es para realizar o deposito da conta solicitada\par
+    pelo cliente.\par
+    :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para deposito \par
+    n\'E3o realizado.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 92     {\cf17 def }deposito(self,codigo):\par
+93         {\cf22 '''}\par
+94 {\cf22             Para realizar um deposito, incrementar o valor informado pelo cliente, no saldo da }\par
+95 {\cf22             conta solicitada.}\par
+96 {\cf22 }\par
+97 {\cf22             :parametro codigo: lista com informa\'E7\'F5es para realizar o deposito da conta solicitada}\par
+98 {\cf22             pelo cliente.}\par
+99 {\cf22             :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para deposito }\par
+100 {\cf22             n\'E3o realizado.}\par
+101 {\cf22         '''}\par
+102         conta = self._cadastro.busca(codigo[1])\par
+103         {\cf19 if} conta != {\cf18 None}:\par
+104             if(conta.depositar(float(codigo[2]))):\par
+105                 {\cf19 return} {\cf22 '1/\{\}'}.format(conta.saldo)\par
+106             {\cf19 return} {\cf22 '0'}\par
+107         {\cf19 return} {\cf22 '0'}\par
+108 \par
+}
+}
+{\xe \v historico\:servidor.Servidor}
+{\xe \v servidor.Servidor\:historico}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.historico (  {\i self},   {\i codigo})}}
+\par
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para realizar o retorno das 4 ultimas transa\'E7\'F5es realizadas pela conta cliente.\par
+\par
+    :parametro codigo: lista com informa\'E7\'F5es para solicitar o historico da conta cliente.\par
+    :retorna uma string com '1' juntamente com as transa\'E7\'F5es do cliente, e '0' caso haja algum\par
+    problema ao solicitar o historico da conta realizada.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 144     {\cf17 def }historico(self,codigo):\par
+145         {\cf22 '''}\par
+146 {\cf22             Para realizar o retorno das 4 ultimas transa\'E7\'F5es realizadas pela conta cliente.}\par
+147 {\cf22 }\par
+148 {\cf22             :parametro codigo: lista com informa\'E7\'F5es para solicitar o historico da conta cliente.}\par
+149 {\cf22             :retorna uma string com '1' juntamente com as transa\'E7\'F5es do cliente, e '0' caso haja algum}\par
+150 {\cf22             problema ao solicitar o historico da conta realizada.}\par
+151 {\cf22         '''}\par
+152         conta = self._cadastro.busca(codigo[1])\par
+153         {\cf19 if} conta != {\cf18 None}:\par
+154             n_transacoes=len(conta.historico.transacoes)\par
+155             if(n_transacoes > 4):\par
+156                 n_transacoes = 4\par
+157             transacoes_str = {\cf22 ''}\par
+158             {\cf19 for} i {\cf19 in} range(0,n_transacoes):\par
+159                 transacoes_str = transacoes_str+{\cf22 '/'}+conta.historico.transacoes[i]\par
+160             {\cf19 return} {\cf22 '1'}+transacoes_str\par
+161         {\cf19 return} {\cf22 '0'}\par
+162 \par
+}
+}
+{\xe \v ligar_servidor\:servidor.Servidor}
+{\xe \v servidor.Servidor\:ligar_servidor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.ligar_servidor (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para deixar o srvidor apto a realizar cone\'E7\'F5es e receber mensagens,\par
+    realizando as devidas opera\'E7\'F5es de acordo com o que o cliente informa\par
+    por meio do codigo.\par
+\par
+    Lista de codigos que poder\'E3o ser enviados pelo cliente:\par
+    Para solicitar cadastro : '0/nome/sobre_nome/cpf'\par
+    Para solicitar login : '1/cpf'\par
+    Para solicitar deposito : '2/cpf/valor'\par
+    Para solicitar sauqe : '3/cpf/valor'\par
+    Para solicitar transferencia: '4/cpf/valor/cpf_conta_para_transferir'\par
+    Para solicitar historico: '5/cpf'\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 163     {\cf17 def }ligar_servidor(self):\par
+164         {\cf22 '''}\par
+165 {\cf22             Para deixar o srvidor apto a realizar cone\'E7\'F5es e receber mensagens,}\par
+166 {\cf22             realizando as devidas opera\'E7\'F5es de acordo com o que o cliente informa}\par
+167 {\cf22             por meio do codigo.}\par
+168 {\cf22 }\par
+169 {\cf22             Lista de codigos que poder\'E3o ser enviados pelo cliente:}\par
+170 {\cf22             Para solicitar cadastro : '0/nome/sobre_nome/cpf'}\par
+171 {\cf22             Para solicitar login : '1/cpf'}\par
+172 {\cf22             Para solicitar deposito : '2/cpf/valor'}\par
+173 {\cf22             Para solicitar sauqe : '3/cpf/valor'}\par
+174 {\cf22             Para solicitar transferencia: '4/cpf/valor/cpf_conta_para_transferir'}\par
+175 {\cf22             Para solicitar historico: '5/cpf'}\par
+176 {\cf22         '''}\par
+177         host = {\cf22 'localhost'}\par
+178         port = 8000\par
+179         addr = (host, port)\par
+180         serv_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) {\cf20 #cria o socket}\par
+181         serv_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) {\cf20 #reinicializa o socket}\par
+182         serv_socket.bind(addr) {\cf20 #define a porta e quais ips podem se conectar com o servidor}\par
+183         serv_socket.listen(10) {\cf20 #define o limite de conex\'F5es}\par
+184 \par
+185 \par
+186         while({\cf17 True}):\par
+187             print({\cf22 '-aguardando conexao...'})\par
+188             con, cliente = serv_socket.accept() {\cf20 #servidor aguardando conex\'E3o}\par
+189             print({\cf22 '-coneccao realizada'})\par
+190             \par
+191             {\cf20 #operacoes do servidor}\par
+192             print({\cf22 '-aguardando solicitacao...'})\par
+193             recebe = con.recv(1024) {\cf20 #define que os pacotes recebidos s\'E3o de ate 1024 bytes}\par
+194             \par
+195             print({\cf22 '-solicitacao recebida...'})\par
+196 \par
+197             {\cf20 #pre-processamento do codigo}\par
+198             codigo = self.pre_processamento(recebe.decode())\par
+199             print(codigo)\par
+200         \par
+201             if(codigo[0] == {\cf22 'cadastra'}):\par
+202                 saida = self.cadastrar(codigo)\par
+203                 con.send(saida.encode())\par
+204             elif(codigo[0] == {\cf22 'login'}):\par
+205                 saida = self.login(codigo)\par
+206                 con.send(saida.encode())\par
+207             elif(codigo[0] == {\cf22 'deposito'}):\par
+208                 saida = self.deposito(codigo)\par
+209                 con.send(saida.encode())\par
+210             elif(codigo[0] == {\cf22 'saque'}):\par
+211                 saida = self.saque(codigo)\par
+212                 con.send(saida.encode())\par
+213             elif(codigo[0] ==  {\cf22 'transferencia'}):\par
+214                 saida = self.transferencia(codigo)\par
+215                 con.send(saida.encode())\par
+216             elif(codigo[0] == {\cf22 'historico'}):\par
+217                 saida = self.historico(codigo)\par
+218                 con.send(saida.encode())\par
+219 \par
+220             print({\cf22 '-solicitacao recebida...'})\par
+221             print({\cf22 '-\{\} feito por conta \{\}'}.format(codigo[0],codigo[1]))\par
+222             print({\cf22 ''})\par
+223             self.mostrar_todas_contas()\par
+224             print({\cf22 ''})\par
+225 \par
+226             {\cf20 #print('codigo recebido: \{\}'.format(codigo))}\par
+227 \par
+228         serv_socket.close()\par
+}
+}
+{\xe \v login\:servidor.Servidor}
+{\xe \v servidor.Servidor\:login}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.login (  {\i self},   {\i codigo})}}
+\par
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para realizar o a busca das informa\'E7\'F5es do usuario solicitado pelo cliente e \par
+    retorna uma string pronta para enviar os dados para o cliente.\par
+\par
+    :parametro codigo: lista com informa\'E7\'F5es para realizar a busca da conta solicitada\par
+    pelo cliente.\par
+    :retorna uma string com '1' juntamente com os dados da conta solicitada, informando\par
+    a que a conta existe, e '0' para conta n\'E3o encontrada.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 77     {\cf17 def }login(self,codigo):\par
+78         {\cf22 '''}\par
+79 {\cf22             Para realizar o a busca das informa\'E7\'F5es do usuario solicitado pelo cliente e }\par
+80 {\cf22             retorna uma string pronta para enviar os dados para o cliente.}\par
+81 {\cf22 }\par
+82 {\cf22             :parametro codigo: lista com informa\'E7\'F5es para realizar a busca da conta solicitada}\par
+83 {\cf22             pelo cliente.}\par
+84 {\cf22             :retorna uma string com '1' juntamente com os dados da conta solicitada, informando}\par
+85 {\cf22             a que a conta existe, e '0' para conta n\'E3o encontrada.}\par
+86 {\cf22         '''}\par
+87         conta = self._cadastro.busca(codigo[1])\par
+88         {\cf19 if} conta != {\cf18 None}:\par
+89             {\cf19 return} {\cf22 '1/\{\}/\{\}/\{\}'}.format(conta.titular.nome,conta.titular.sobrenome,conta.saldo)\par
+90         {\cf19 return} {\cf22 '0'}\par
+91 \par
+}
+}
+{\xe \v mostrar_todas_contas\:servidor.Servidor}
+{\xe \v servidor.Servidor\:mostrar_todas_contas}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.mostrar_todas_contas (  {\i self})}}
+\par
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para mostrar todas as contas cadastradas no objeto _cadastro.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 19     {\cf17 def }mostrar_todas_contas(self):\par
+20         {\cf22 '''}\par
+21 {\cf22             Para mostrar todas as contas cadastradas no objeto _cadastro.}\par
+22 {\cf22         '''}\par
+23         {\cf19 for} conta {\cf19 in} self._cadastro.lista_contas:\par
+24             print({\cf22 '\{\} - \{\} - \{\}'}.format(conta.titular.cpf,conta.titular.nome,conta.saldo))\par
+25 \par
+}
+}
+{\xe \v pre_processamento\:servidor.Servidor}
+{\xe \v servidor.Servidor\:pre_processamento}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.pre_processamento (  {\i self},   {\i codigo})}}
+\par
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para realizar o pre-processamento do codigo enviado pelo cliente.\par
+\par
+    :parametro codigo: string enviada pelo cliente e obtido apos a conec\'E7\'E3o com o cliente.\par
+    :retorna o codigo_lista, que \'E9 o codigo pre processado em formato de lista.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 26     {\cf17 def }pre_processamento(self,codigo):\par
+27         {\cf22 '''}\par
+28 {\cf22             Para realizar o pre-processamento do codigo enviado pelo cliente.}\par
+29 {\cf22 }\par
+30 {\cf22             :parametro codigo: string enviada pelo cliente e obtido apos a conec\'E7\'E3o com o cliente.}\par
+31 {\cf22             :retorna o codigo_lista, que \'E9 o codigo pre processado em formato de lista.}\par
+32 {\cf22         '''}\par
+33 \par
+34         codigo_lista = codigo.split({\cf22 '/'})\par
+35         {\cf20 #cadastra}\par
+36         {\cf20 #cadastrar/nome/sobre_nome/cpf}\par
+37         if(codigo_lista[0]=={\cf22 '0'}):\par
+38             codigo_lista[0] = {\cf22 'cadastra'}\par
+39         {\cf20 #login}\par
+40         {\cf20 #login/cpf}\par
+41         elif(codigo_lista[0]=={\cf22 '1'}):\par
+42             codigo_lista[0] = {\cf22 'login'}\par
+43         {\cf20 #deposita}\par
+44         {\cf20 #deposito/cpf/valor}\par
+45         elif(codigo_lista[0]=={\cf22 '2'}):\par
+46             codigo_lista[0] = {\cf22 'deposito'}\par
+47         {\cf20 #saque}\par
+48         {\cf20 #saque/cpf/valor}\par
+49         elif(codigo_lista[0]=={\cf22 '3'}):\par
+50             codigo_lista[0] = {\cf22 'saque'}\par
+51         {\cf20 #transferencia}\par
+52         {\cf20 #transferencia/cpf/valor/cpf_conta_para_transferir}\par
+53         elif(codigo_lista[0]=={\cf22 '4'}):\par
+54             codigo_lista[0] = {\cf22 'transferencia'}\par
+55         {\cf20 #historico}\par
+56         {\cf20 #historico/cpf}\par
+57         elif(codigo_lista[0]=={\cf22 '5'}):\par
+58             codigo_lista[0] = {\cf22 'historico'}\par
+59             \par
+60         {\cf19 return} codigo_lista\par
+61 \par
+}
+}
+{\xe \v saque\:servidor.Servidor}
+{\xe \v servidor.Servidor\:saque}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.saque (  {\i self},   {\i codigo})}}
+\par
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para realizar um saque, decrementar o valor informado pelo cliente, no saldo da \par
+    conta solicitada.\par
+\par
+    :parametro codigo: lista com informa\'E7\'F5es para realizar o saque da conta solicitada\par
+    pelo cliente.\par
+    :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para saque \par
+    n\'E3o realizado.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 109     {\cf17 def }saque(self,codigo):\par
+110         {\cf22 '''}\par
+111 {\cf22             Para realizar um saque, decrementar o valor informado pelo cliente, no saldo da }\par
+112 {\cf22             conta solicitada.}\par
+113 {\cf22 }\par
+114 {\cf22             :parametro codigo: lista com informa\'E7\'F5es para realizar o saque da conta solicitada}\par
+115 {\cf22             pelo cliente.}\par
+116 {\cf22             :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para saque }\par
+117 {\cf22             n\'E3o realizado.}\par
+118 {\cf22         '''}\par
+119         conta = self._cadastro.busca(codigo[1])\par
+120         {\cf19 if} conta != {\cf18 None}:\par
+121             if(conta.sacar(float(codigo[2]))):\par
+122                 {\cf19 return} {\cf22 '1/\{\}'}.format(conta.saldo)\par
+123             {\cf19 return} {\cf22 '0'}\par
+124         {\cf19 return} {\cf22 '0'}\par
+125 \par
+}
+}
+{\xe \v transferencia\:servidor.Servidor}
+{\xe \v servidor.Servidor\:transferencia}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+def servidor.Servidor.transferencia (  {\i self},   {\i codigo})}}
+\par
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     Para realizar uma transferencia, dencrementar o valor informado pelo cliente, no saldo da \par
+    conta solicitada, e incrementando na conta informada.\par
+\par
+    :parametro codigo: lista com informa\'E7\'F5es para realizar a transa\'E7\'E3o da conta solicitada\par
+    pelo cliente.\par
+    :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para tansa\'E7\'E3o \par
+    n\'E3o realizado.\par
+}
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 126     {\cf17 def }transferencia(self,codigo):\par
+127         {\cf22 '''}\par
+128 {\cf22             Para realizar uma transferencia, dencrementar o valor informado pelo cliente, no saldo da }\par
+129 {\cf22             conta solicitada, e incrementando na conta informada.}\par
+130 {\cf22 }\par
+131 {\cf22             :parametro codigo: lista com informa\'E7\'F5es para realizar a transa\'E7\'E3o da conta solicitada}\par
+132 {\cf22             pelo cliente.}\par
+133 {\cf22             :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para tansa\'E7\'E3o }\par
+134 {\cf22             n\'E3o realizado.}\par
+135 {\cf22         '''}\par
+136         conta = self._cadastro.busca(codigo[1])\par
+137         conta_1 = self._cadastro.busca(codigo[3])\par
+138         {\cf19 if} conta != {\cf18 None} {\cf19 and} conta_1!={\cf18 None}:\par
+139             if(conta.transferir(conta_1,float(codigo[2]))):\par
+140                 {\cf19 return} {\cf22 '1/\{\}'}.format(conta.saldo)\par
+141             {\cf19 return} {\cf22 '0'}\par
+142         {\cf19 return} {\cf22 '0'}\par
+143     \par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+A documenta\'E7\'E3o para essa classe foi gerada a partir do seguinte arquivo:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b servidor.py}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia da Classe Banco_T.Teste_Banco\par \pard\plain 
+{\tc\tcl2 \v Banco_T.Teste_Banco}
+{\xe \v Banco_T.Teste_Banco}
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+Diagrama de hierarquia para Banco_T.Teste_Banco:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_banco___t_1_1_teste___banco.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+A documenta\'E7\'E3o para essa classe foi gerada a partir do seguinte arquivo:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/{\b Banco_T.py}\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Arquivos{\tc \v Arquivos}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/Banco.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/Banco.py}
+{\xe \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/Banco.py}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Banco.Cliente}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Banco.Historico}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Banco.Banco}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+<em>Namespaces</em>\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+ {\b Banco}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/Banco_T.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/Banco_T.py}
+{\xe \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/Banco_T.py}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Banco_T.Teste_Banco}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+<em>Namespaces</em>\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+ {\b Banco_T}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_Historico_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_Cliente_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_nome_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_nome_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_nome_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_nome_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_sobrenome_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_sobrenome_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_sobrenome_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_sobrenome_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_cpf_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_cpf_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_cpf_Cliente_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_cpf_get_Cliente_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_numero_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_numero_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_numero_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_numero_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_titular_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_titular_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_saldo_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_saldo_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_limite_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_limite_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_limite_Banco_exixte} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_set_limite_Banco_da_saida} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_deposito_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_deposito_Banco_saldo_esperado} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_deposito_Banco_imprimir_historico} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_sacar_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_saca_Banco_valor_True} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_saca_Banco_valor_False} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_saca_Banco_saldo_esperado} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_saca_Banco_imprimir_historico} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_extrato_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_extrato_Banco_valor_esperado} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_extrato_Banco_imprimir_historico} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_transferir_Banco_existe} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_trasferir_Banco_True} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_trasferir_Banco_False} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_trasferir_Banco_valor_esperado} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_transferir_Banco_imprimir_historico} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_total_contas_existe_Banco_banco_0} (self)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b Banco_T.teste_get_total_contas_existe_Banco_Banco} (self)\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/cadastro.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/cadastro.py}
+{\xe \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/cadastro.py}
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b cadastro.Cadastro}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+<em>Namespaces</em>\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+ {\b cadastro}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/main_servidore.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/main_servidore.py}
+{\xe \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/main_servidore.py}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+<em>Namespaces</em>\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+ {\b main_servidore}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+def {\b main_servidore.main} ()\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/servidor.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/servidor.py}
+{\xe \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/servidor.py}
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b servidor.Servidor}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+<em>Namespaces</em>\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+ {\b servidor}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/t_servidor.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/t_servidor.py}
+{\xe \v C:/Users/jeand/Desktop/Trabalho de POO II/Controle-de-Vers-o---GIT---Reposit-ros/Nova_vercao_com_servidor/Servidor/t_servidor.py}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+<em>Namespaces</em>\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+ {\b t_servidor}\par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Sum\'E1rio\par 
+\pard\plain 
+{\tc \v Sum\'E1rio}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

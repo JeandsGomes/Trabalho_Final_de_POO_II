@@ -7,16 +7,29 @@ from Banco import Historico
 from Banco import Banco
 
 class Servidor():
-
+    '''
+        O objeto da class Servidor representar a interface de conecção do servido com o cliente.
+        Todos as informações do objeto são inicializados e inicializando um objeto do tipo cadastro
+        um contador de contas cadastradas.
+    '''
     def __init__(self):
         self._cadastro = Cadastro()
         self._n_conta = 0
 
     def mostrar_todas_contas(self):
+        '''
+            Para mostrar todas as contas cadastradas no objeto _cadastro.
+        '''
         for conta in self._cadastro.lista_contas:
             print('{} - {} - {}'.format(conta.titular.cpf,conta.titular.nome,conta.saldo))
 
     def pre_processamento(self,codigo):
+        '''
+            Para realizar o pre-processamento do codigo enviado pelo cliente.
+
+            :parametro codigo: string enviada pelo cliente e obtido apos a conecção com o cliente.
+            :retorna o codigo_lista, que é o codigo pre processado em formato de lista.
+        '''
 
         codigo_lista = codigo.split('/')
         #cadastra
@@ -47,6 +60,13 @@ class Servidor():
         return codigo_lista
 
     def cadastrar(self,codigo):
+        '''
+            Para realizar o cadastro da conta utilizando as informações do codigo recebido pelo cliente e tratado.
+
+            :parametro codigo: lista com informações para cadastro de conta.
+            :retorna uma string com '1' para conta realizada, e '0' para conta não realizada.
+        '''
+
         pessoa = Cliente(codigo[1],codigo[2],codigo[3])
         conta = Banco(self._n_conta,pessoa,0.0,1000)
         self._n_conta =+ 1
@@ -55,12 +75,30 @@ class Servidor():
         return '0' 
 
     def login(self,codigo):
+        '''
+            Para realizar o a busca das informações do usuario solicitado pelo cliente e 
+            retorna uma string pronta para enviar os dados para o cliente.
+
+            :parametro codigo: lista com informações para realizar a busca da conta solicitada
+            pelo cliente.
+            :retorna uma string com '1' juntamente com os dados da conta solicitada, informando
+            a que a conta existe, e '0' para conta não encontrada.
+        '''
         conta = self._cadastro.busca(codigo[1])
         if conta != None:
             return '1/{}/{}/{}'.format(conta.titular.nome,conta.titular.sobrenome,conta.saldo)
         return '0'
 
     def deposito(self,codigo):
+        '''
+            Para realizar um deposito, incrementar o valor informado pelo cliente, no saldo da 
+            conta solicitada.
+
+            :parametro codigo: lista com informações para realizar o deposito da conta solicitada
+            pelo cliente.
+            :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para deposito 
+            não realizado.
+        '''
         conta = self._cadastro.busca(codigo[1])
         if conta != None:
             if(conta.depositar(float(codigo[2]))):
@@ -69,6 +107,15 @@ class Servidor():
         return '0'
 
     def saque(self,codigo):
+        '''
+            Para realizar um saque, decrementar o valor informado pelo cliente, no saldo da 
+            conta solicitada.
+
+            :parametro codigo: lista com informações para realizar o saque da conta solicitada
+            pelo cliente.
+            :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para saque 
+            não realizado.
+        '''
         conta = self._cadastro.busca(codigo[1])
         if conta != None:
             if(conta.sacar(float(codigo[2]))):
@@ -77,6 +124,15 @@ class Servidor():
         return '0'
 
     def transferencia(self,codigo):
+        '''
+            Para realizar uma transferencia, dencrementar o valor informado pelo cliente, no saldo da 
+            conta solicitada, e incrementando na conta informada.
+
+            :parametro codigo: lista com informações para realizar a transação da conta solicitada
+            pelo cliente.
+            :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para tansação 
+            não realizado.
+        '''
         conta = self._cadastro.busca(codigo[1])
         conta_1 = self._cadastro.busca(codigo[3])
         if conta != None and conta_1!=None:
@@ -86,6 +142,13 @@ class Servidor():
         return '0'
     
     def historico(self,codigo):
+        '''
+            Para realizar o retorno das 4 ultimas transações realizadas pela conta cliente.
+
+            :parametro codigo: lista com informações para solicitar o historico da conta cliente.
+            :retorna uma string com '1' juntamente com as transações do cliente, e '0' caso haja algum
+            problema ao solicitar o historico da conta realizada.
+        '''
         conta = self._cadastro.busca(codigo[1])
         if conta != None:
             n_transacoes=len(conta.historico.transacoes)
@@ -98,6 +161,19 @@ class Servidor():
         return '0'
 
     def ligar_servidor(self):
+        '''
+            Para deixar o srvidor apto a realizar coneções e receber mensagens,
+            realizando as devidas operações de acordo com o que o cliente informa
+            por meio do codigo.
+
+            Lista de codigos que poderão ser enviados pelo cliente:
+            Para solicitar cadastro : '0/nome/sobre_nome/cpf'
+            Para solicitar login : '1/cpf'
+            Para solicitar deposito : '2/cpf/valor'
+            Para solicitar sauqe : '3/cpf/valor'
+            Para solicitar transferencia: '4/cpf/valor/cpf_conta_para_transferir'
+            Para solicitar historico: '5/cpf'
+        '''
         host = 'localhost'
         port = 8000
         addr = (host, port)

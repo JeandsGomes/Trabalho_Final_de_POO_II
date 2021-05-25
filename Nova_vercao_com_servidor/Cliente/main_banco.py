@@ -266,18 +266,39 @@ class Main(QMainWindow,Ui_Main):
     
 
     def abrirLogin(self):
+        '''
+            abre a tela de login
+        '''
         self.QtStack.setCurrentIndex(0)
     def abrirMenu(self):
+        '''
+            abre a tela de menu
+        '''
         self.QtStack.setCurrentIndex(1)
     def abrirCadastro(self):
+        '''
+            abre a tela de cadastro
+        '''
         self.QtStack.setCurrentIndex(2)
     def abrirDeposito(self):
+        '''
+            abre a tela de deposito
+        '''
         self.QtStack.setCurrentIndex(3)
     def abrirTransfere(self):
+        '''
+            abre a tela de transferencia
+        '''
         self.QtStack.setCurrentIndex(4)
     def abrirSaque(self):
+        '''
+            abre a tela de Saque
+        '''
         self.QtStack.setCurrentIndex(5)
     def abrirHistorico(self):
+        '''
+            abre a tela de Historico
+        '''
         self.QtStack.setCurrentIndex(6)
         
 

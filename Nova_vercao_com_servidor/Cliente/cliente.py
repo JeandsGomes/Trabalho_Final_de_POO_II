@@ -1,5 +1,5 @@
 
-#from Servidor.Banco import Cliente
+
 import socket
 
 class plataforma_cliente():

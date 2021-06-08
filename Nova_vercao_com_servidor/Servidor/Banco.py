@@ -70,7 +70,9 @@ class Historico():
     '''
 
     def __init__(self):
-        self._data_abertura = datetime.datetime.today()
+        hoje=datetime.datetime.today()
+        data_abertura = str(hoje).split(' ')
+        self._data_abertura = data_abertura[0]
         self._transacoes = []
     
     @property
@@ -79,6 +81,18 @@ class Historico():
             retorna as transações feitas por um cliente.
         '''
         return self._transacoes
+
+    @transacoes.setter
+    def transacoes(self,transacoes_lista):
+        self._transacoes = transacoes_lista
+
+    @property
+    def data_abertura(self):
+        return self._data_abertura
+
+    @data_abertura.setter
+    def data_abertura(self,data_abertura_str):
+        self._data_abertura = data_abertura_str
 
     def imprime(self):
         '''
@@ -124,6 +138,10 @@ class Banco():
             retorna o saldo da conta.
         '''
         return self._saldo
+
+    @saldo.setter
+    def saldo(self,saldo_interio):
+        self._saldo = saldo_interio
 
     @property
     def historico(self):
@@ -224,3 +242,13 @@ class Banco():
             retorna o numero de contas cadastradas no banco.
         '''
         return Banco._total_contas
+
+    def mostrar_conta(self):
+        print('self.numero == {}'.format(self._numero))
+        print('self.titular.nome == {}'.format(self.titular.nome))
+        print('self.titular.sobrenome == {}'.format(self.titular.sobrenome))
+        print('self.titular.cpf == {}'.format(self.titular.cpf))
+        print('self.saldo == {}'.format(self.saldo))
+        print('self.Limite == {}'.format(self.limite))
+        print('self.histarico.data_abertura == {}'.format(self.historico.transacoes))
+        print('self.histarico.transacoes == {}'.format(self.historico.data_abertura))

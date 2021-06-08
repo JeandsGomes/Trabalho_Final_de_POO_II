@@ -102,6 +102,8 @@ class Servidor():
         conta = self._cadastro.busca(codigo[1])
         if conta != None:
             if(conta.depositar(float(codigo[2]))):
+                self._cadastro.atualizar(conta)
+                print('entrou aqui')
                 return '1/{}'.format(conta.saldo)
             return '0'
         return '0'
@@ -119,6 +121,7 @@ class Servidor():
         conta = self._cadastro.busca(codigo[1])
         if conta != None:
             if(conta.sacar(float(codigo[2]))):
+                self._cadastro.atualizar(conta)
                 return '1/{}'.format(conta.saldo)
             return '0'
         return '0'
@@ -137,6 +140,8 @@ class Servidor():
         conta_1 = self._cadastro.busca(codigo[3])
         if conta != None and conta_1!=None:
             if(conta.transferir(conta_1,float(codigo[2]))):
+                self._cadastro.atualizar(conta)
+                self._cadastro.atualizar(conta_1)
                 return '1/{}'.format(conta.saldo)
             return '0'
         return '0'

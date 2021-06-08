@@ -136,6 +136,7 @@ class plataforma_cliente():
         codigo = '2'+'/'+cpf+'/'+valor
         try:
             saida = self.conecxao_servidor(codigo)
+            print('Saida = %s' % (saida))
         except:
             return False
         saida_lst = saida.split('/')

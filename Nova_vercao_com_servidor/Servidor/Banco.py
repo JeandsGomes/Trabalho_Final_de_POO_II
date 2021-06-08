@@ -189,7 +189,7 @@ class Banco():
             return False
         else:
             self._saldo += valor
-            self._historico.transacoes.append("deposito de {}".format(valor))
+            self._historico.transacoes.append("deposito de {} data: {}\n".format(valor,  datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
             return True
     
     @property
@@ -208,7 +208,7 @@ class Banco():
         '''
         if(valor <= self._saldo and valor > 0):
             self._saldo -= valor
-            self._historico.transacoes.append("saque de {}".format(valor))
+            self._historico.transacoes.append("saque de {} data: {}\n".format(valor, datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
             return True
         return False
 
@@ -223,8 +223,9 @@ class Banco():
             :return:bool.
         '''
         if(self.sacar(valor)):
+            
             destino.depositar(valor)
-            self._historico.transacoes[len(self._historico.transacoes)-1] = "transferencia de {} para conta {}".format(valor, destino.numero)
+            self._historico.transacoes[len(self._historico.transacoes)-1] = "transferencia de {} para conta {} data: {}\n".format(valor, destino.numero, datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
             return True
         return False
 
@@ -233,7 +234,7 @@ class Banco():
         '''
             retorna uma str com numero da conta e saldo.
         '''
-        self._historico.transacoes.append("tirou extrato - saldo de {}".format(self.saldo))
+        self._historico.transacoes.append("tirou extrato - saldo de {}\n".format(self.saldo))
         return "numero: {} \n {}".format(self._numero,self._saldo)
 
     @staticmethod

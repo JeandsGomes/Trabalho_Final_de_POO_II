@@ -47,7 +47,7 @@ class Tela_login(object):
         self.label_login_logo = QtWidgets.QLabel(self.frame)
         self.label_login_logo.setMaximumSize(QtCore.QSize(160, 16777215))
         self.label_login_logo.setText("")
-        self.label_login_logo.setPixmap(QtGui.QPixmap(":/newPrefix/New_Piskel_(5).jpg"))
+        self.label_login_logo.setPixmap(QtGui.QPixmap("New_Piskel_(5).jpg"))
         self.label_login_logo.setObjectName("label_login_logo")
         self.horizontalLayout_2.addWidget(self.label_login_logo)
         self.verticalLayout_2.addWidget(self.frame)
@@ -152,7 +152,7 @@ class Tela_login(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Login"))
         self.label_login_string_fazer_login.setText(_translate("MainWindow", "             Fazer Login no JUbank"))
         self.lineEdit_login_cpf.setPlaceholderText(_translate("MainWindow", "CPF"))
         self.pushButton_login_login.setText(_translate("MainWindow", "Login"))

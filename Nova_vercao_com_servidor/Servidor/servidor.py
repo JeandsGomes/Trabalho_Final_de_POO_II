@@ -103,7 +103,7 @@ class Servidor():
         if conta != None:
             if(conta.depositar(float(codigo[2]))):
                 self._cadastro.atualizar(conta)
-                print('entrou aqui')
+                #print('entrou aqui')
                 return '1/{}'.format(conta.saldo)
             return '0'
         return '0'
@@ -154,6 +154,7 @@ class Servidor():
             :retorna uma string com '1' juntamente com as transações do cliente, e '0' caso haja algum
             problema ao solicitar o historico da conta realizada.
         '''
+        #print('Entrei aqui')
         conta = self._cadastro.busca(codigo[1])
         if conta != None:
             n_transacoes=len(conta.historico.transacoes)

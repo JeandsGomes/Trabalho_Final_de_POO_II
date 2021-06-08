@@ -3,6 +3,8 @@ import mysql.connector as mysql
 from Banco import Cliente
 from Banco import Historico
 from Banco import Banco
+from mysql.connector import Error
+
 
 class Cadastro:
     '''
@@ -12,127 +14,149 @@ class Cadastro:
 
     __slots__=['_lista']
     def __init__(self):
-        self._lista=[]
-        #self._conta_cache = Banco()
-        conexao = mysql.connect(host = 'localhost',db='teste_5',user='root')
-        cursor = conexao.cursor()
+        try:
+            self._lista=[]
+            #self._conta_cache = Banco()
+            conexao = mysql.connect(host = 'localhost',db='test_5',user='root',passwd='301997')
+            cursor = conexao.cursor()
 
-        sql = """CREATE TABLE IF NOT EXISTS usuarios(id INTEGER AUTO_INCREMENT PRIMARY KEY UNIQUE, 
-        banco_numero text NOT NULL, banco_titular_nome text NOT NULL, banco_titular_sobrenome text NOT NULL, 
-        banco_titular_cpf VARCHAR(32) NOT NULL, banco_saldo text NOT NULL, banco_limite text NOT NULL, 
-        banco_historico_transacoes text NOT NULL, banco_historico_data_abertura text NOT NULL);"""
+            sql = """CREATE TABLE IF NOT EXISTS usuarios(id INTEGER AUTO_INCREMENT PRIMARY KEY UNIQUE, 
+            banco_numero text NOT NULL, banco_titular_nome text NOT NULL, banco_titular_sobrenome text NOT NULL, 
+            banco_titular_cpf VARCHAR(32) NOT NULL, banco_saldo text NOT NULL, banco_limite text NOT NULL, 
+            banco_historico_transacoes text NOT NULL, banco_historico_data_abertura text NOT NULL);"""
 
-        cursor.execute(sql)
+            cursor.execute(sql)
 
-        conexao.commit()
-        conexao.close()
+            conexao.commit()
+            conexao.close()
+        except Error as erro:
+            print("Falha ao criar tabela no Mysql: {}".format(erro))
 
 
     def sqlite_create(self,banco):
         
-        if(True):
-            conexao = mysql.connect(host = 'localhost',db='teste_5',user='root')
-            cursor = conexao.cursor()
+        try:
+            if(True):
 
-            #sql = """CREATE TABLE IF NOT EXISTS usuarios(id INTEGER AUTO_INCREMENT PRIMARY KEY UNIQUE, 
-            #    banco_numero text NOT NULL, banco_titular_nome text NOT NULL, banco_titular_sobrenome text NOT NULL, 
-            #    banco_titular_cpf VARCHAR(32) NOT NULL, banco_saldo text NOT NULL, banco_limite text NOT NULL, 
-            #    banco_historico_transacoes text NOT NULL, banco_historico_data_abertura text NOT NULL);"""
+                conexao = mysql.connect(host = 'localhost',db='test_5',user='root',passwd='301997')
+                cursor = conexao.cursor()
 
-            numero = str(banco.numero)
-            nome = str(banco.titular.nome)
-            sobrenome = str(banco.titular.sobrenome)
-            cpf = str(banco.titular.cpf)
-            saldo = str(banco.saldo)
-            limite = str(banco.limite)
+                #sql = """CREATE TABLE IF NOT EXISTS usuarios(id INTEGER AUTO_INCREMENT PRIMARY KEY UNIQUE, 
+                #    banco_numero text NOT NULL, banco_titular_nome text NOT NULL, banco_titular_sobrenome text NOT NULL, 
+                #    banco_titular_cpf VARCHAR(32) NOT NULL, banco_saldo text NOT NULL, banco_limite text NOT NULL, 
+                #    banco_historico_transacoes text NOT NULL, banco_historico_data_abertura text NOT NULL);"""
 
-            transacoes = '--'
+                numero = str(banco.numero)
+                nome = str(banco.titular.nome)
+                sobrenome = str(banco.titular.sobrenome)
+                cpf = str(banco.titular.cpf)
+                saldo = str(banco.saldo)
+                limite = str(banco.limite)
 
-            data_abertura = str(banco.historico.data_abertura)
-            
-            
+                transacoes = banco._historico.transacoes
+                print(transacoes)
+                data_abertura = str(banco.historico.data_abertura)
+                
+                if (transacoes=='[]'):
+                    transacoes= ''
 
-            #cursor.execute(sql)
-            cursor.execute("INSERT INTO usuarios (banco_numero, banco_titular_nome, banco_titular_sobrenome, banco_titular_cpf, banco_saldo, banco_limite, banco_historico_transacoes, banco_historico_data_abertura ) VALUES ('%s','%s','%s',MD5('%s'),'%s','%s','%s','%s')" % (numero,nome,sobrenome,cpf,saldo,limite,transacoes,data_abertura))
-            print('Aqui')
+                #cursor.execute(sql)
+                cursor.execute("INSERT INTO usuarios (banco_numero, banco_titular_nome, banco_titular_sobrenome, banco_titular_cpf, banco_saldo, banco_limite, banco_historico_transacoes, banco_historico_data_abertura ) VALUES ('%s','%s','%s',MD5('%s'),'%s','%s','%s','%s')" % (numero,nome,sobrenome,cpf,saldo,limite,transacoes,data_abertura))
+                print('Aqui 1')
 
-            conexao.commit()
-            conexao.close()
-
-            return True
-
-        #except:
-        #    print("Falha ao criar tabela no SQLite")
-        #    return False
-
-    def sqlite_read(self,cpf):
-        
-        if(True):
-            conexao = mysql.connect(host = 'localhost',db='teste_5',user='root')
-            cursor = conexao.cursor()
-
-            
-            #sql = """CREATE TABLE IF NOT EXISTS usuarios(id INTEGER AUTO_INCREMENT PRIMARY KEY UNIQUE, 
-            #    banco_numero text NOT NULL, banco_titular_nome text NOT NULL, banco_titular_sobrenome text NOT NULL, 
-            #    banco_titular_cpf VARCHAR(32) NOT NULL, banco_saldo text NOT NULL, banco_limite text NOT NULL, 
-            #    banco_historico_transacoes text NOT NULL, banco_historico_data_abertura text NOT NULL);"""        
-
-            #cursor.execute(sql)
-            print(type(cpf))
-            cursor.execute('SELECT * FROM usuarios WHERE banco_titular_cpf=MD5("%s")' % cpf)
-            usuario = cursor.fetchall()
-            
-            #print(usuario)
-            
-            if (usuario!=[]):
-                #print(usuario)
-                print(usuario[0])
-                cliente_novo = Cliente(usuario[0][2],usuario[0][3],cpf)
-                banco_novo = Banco(int(usuario[0][1]),cliente_novo,float(usuario[0][5]),float(usuario[0][6]))
-                    
-                usuario[0][7].split('--')
-                print('aqui')
-                #banco_novo.historico.transacoes = usuario[0][7].split('--')[1:]
-                banco_novo.historico.transacoes = []
-                banco_novo.historico.data_abertura = usuario[0][8]
                 conexao.commit()
                 conexao.close()
 
-                return banco_novo
-            
-            conexao.commit()
-            conexao.close()
+                return True
+        except Error as erro:
+            print("Falha ao criar tabela no Mysql: {}".format(erro))
             return False
 
-
-
         #except:
-        #    print("Falha ao buscar por usuario no SQLite")
-        #    return False
+        #    print("Falha ao criar tabela no SQLite")
+
+    def sqlite_read(self,cpf):
+        try:
+            if(True):
+                conexao = mysql.connect(host = 'localhost',db='test_5',user='root',passwd='301997')
+                cursor = conexao.cursor()
+
+                
+                #sql = """CREATE TABLE IF NOT EXISTS usuarios(id INTEGER AUTO_INCREMENT PRIMARY KEY UNIQUE, 
+                #    banco_numero text NOT NULL, banco_titular_nome text NOT NULL, banco_titular_sobrenome text NOT NULL, 
+                #    banco_titular_cpf VARCHAR(32) NOT NULL, banco_saldo text NOT NULL, banco_limite text NOT NULL, 
+                #    banco_historico_transacoes text NOT NULL, banco_historico_data_abertura text NOT NULL);"""        
+
+                #cursor.execute(sql)
+                #print(type(cpf))
+                cursor.execute('SELECT * FROM usuarios WHERE banco_titular_cpf=MD5("%s")' % cpf)
+                usuario = cursor.fetchall()
+                
+                #print(usuario)
+                
+                if (usuario!=[]):
+                    #print(usuario)
+                    print(usuario[0])
+                    cliente_novo = Cliente(usuario[0][2],usuario[0][3],cpf)
+                    banco_novo = Banco(int(usuario[0][1]),cliente_novo,float(usuario[0][5]),float(usuario[0][6]))
+                        
+                    usuario[0][7].split('--')
+                    #print('aqui 2')
+                    print(usuario[0][7])
+                    print(type(usuario[0][7]))
+                    #banco_novo.historico.transacoes = usuario[0][7].split('--')[1:]
+                    #banco_novo.historico.transacoes = []
+                           
+                    banco_novo.historico.transacoes.append (usuario[0][7])
+                    banco_novo.historico.data_abertura = usuario[0][8]
+                    conexao.commit()
+                    conexao.close()
+
+                    return banco_novo
+                
+                conexao.commit()
+                conexao.close()
+                return False
+
+
+
+        except Error as erro:
+            print("Falha ao ler Banco de dados: {}".format(erro))
+            return False
 
     def sqlite_update(self,banco_atualizado):
         #dados_atualizados == (banco_numero,banco_titular_nome,banco_titular_sobrenome,banco_titular_cpf,banco_saldo,banco_limite,banco_historico_transacoes,banco_historico_data_abertura)
-        if(True):
+        try:    
+            if(True):
 
-            conexao = mysql.connect(host = 'localhost',db='teste_5',user='root')
-            cursor = conexao.cursor()
+                conexao = mysql.connect(host = 'localhost',db='test_5',user='root',passwd='301997')
+                cursor = conexao.cursor()
 
-            #sql = """CREATE TABLE IF NOT EXISTS usuarios(id int AUTO_INCREMENT PRIMARY KEY, 
-            #    banco_numero text NOT NULL, banco_titular_nome text NOT NULL, banco_titular_sobrenome text NOT NULL, 
-            #    banco_titular_cpf VARCHAR(32) NOT NULL, banco_saldo text NOT NULL, banco_limite text NOT NULL, 
-            #    banco_historico_transacoes text NOT NULL, banco_historico_data_abertura text NOT NULL);"""        
+                #sql = """CREATE TABLE IF NOT EXISTS usuarios(id int AUTO_INCREMENT PRIMARY KEY, 
+                #    banco_numero text NOT NULL, banco_titular_nome text NOT NULL, banco_titular_sobrenome text NOT NULL, 
+                #    banco_titular_cpf VARCHAR(32) NOT NULL, banco_saldo text NOT NULL, banco_limite text NOT NULL, 
+                #    banco_historico_transacoes text NOT NULL, banco_historico_data_abertura text NOT NULL);"""        
 
-            #cursor.execute(sql)
-            cursor.execute('UPDATE usuarios SET banco_saldo = "%s", banco_limite = "%s" WHERE banco_titular_cpf = MD5("%s")' % (str(banco_atualizado.saldo),str(banco_atualizado.limite),banco_atualizado.titular.cpf))
-            print('%s , %s , %s' % (banco_atualizado.saldo,banco_atualizado.limite,banco_atualizado.titular.cpf))
-            conexao.commit()
-            conexao.close()
+                #cursor.execute(sql)
+                #print("aqui 3")
+                #print(type(banco_atualizado._historico.transacoes))
+                pega=banco_atualizado._historico.transacoes
+                lista=''
+                for i in pega:
+                    if i !='[]' and i!='':
+                        lista=lista+i
 
-            return True
+                
+                #print(lista)
+                cursor.execute('UPDATE usuarios SET banco_saldo = "%s", banco_limite = "%s", banco_historico_transacoes="%s" WHERE banco_titular_cpf = MD5("%s")' % (str(banco_atualizado.saldo),str(banco_atualizado.limite),lista,banco_atualizado.titular.cpf))
+                print('%s , %s , %s, %s' % (banco_atualizado.saldo,banco_atualizado.limite,lista,banco_atualizado.titular.cpf))
+                conexao.commit()
+                conexao.close()
 
-        #except:
-        #    print("Falha ao atualizar o usuario no SQLite")
-        #    return False
+                return True
+
+        except Error as erro:
+            print("Falha ao fazer update no Mysql: {}".format(erro))
 
 
     @property

@@ -33,7 +33,7 @@ class Tela_cadastro(object):
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.frame_cadastro_logo = QtWidgets.QFrame(self.frame_3)
         self.frame_cadastro_logo.setMinimumSize(QtCore.QSize(50, 50))
-        self.frame_cadastro_logo.setStyleSheet("background-image: url(:/newPrefix/New Piskel (5).png);\n"
+        self.frame_cadastro_logo.setStyleSheet("background-image: url(New_Piskel_(5).png);\n"
 "background-repeat: no-repeat;\n"
 "background-position: center;")
         self.frame_cadastro_logo.setFrameShape(QtWidgets.QFrame.StyledPanel)

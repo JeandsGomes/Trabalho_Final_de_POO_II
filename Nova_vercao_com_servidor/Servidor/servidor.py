@@ -68,7 +68,7 @@ class Servidor():
         '''
 
         pessoa = Cliente(codigo[1],codigo[2],codigo[3])
-        conta = Banco(self._n_conta,pessoa,0.0,1000)
+        conta = Banco(self._n_conta,pessoa,0.0,1000,codigo[4])
         self._n_conta =+ 1
         if(self._cadastro.cadastra(conta)):
             return '1'
@@ -84,9 +84,9 @@ class Servidor():
             :retorna uma string com '1' juntamente com os dados da conta solicitada, informando
             a que a conta existe, e '0' para conta não encontrada.
         '''
-        conta = self._cadastro.busca(codigo[1])
+        conta = self._cadastro.busca(codigo[1],codigo[2])
         if conta != None:
-            return '1/{}/{}/{}'.format(conta.titular.nome,conta.titular.sobrenome,conta.saldo)
+            return '1/{}/{}/{}/{}'.format(conta.titular.nome,conta.titular.sobrenome,conta.saldo,conta.senha)
         return '0'
 
     def deposito(self,codigo):
@@ -99,7 +99,7 @@ class Servidor():
             :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para deposito 
             não realizado.
         '''
-        conta = self._cadastro.busca(codigo[1])
+        conta = self._cadastro.buscaSecun(codigo[1])
         if conta != None:
             if(conta.depositar(float(codigo[2]))):
                 self._cadastro.atualizar(conta)
@@ -118,7 +118,7 @@ class Servidor():
             :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para saque 
             não realizado.
         '''
-        conta = self._cadastro.busca(codigo[1])
+        conta = self._cadastro.buscaSecun(codigo[1])
         if conta != None:
             if(conta.sacar(float(codigo[2]))):
                 self._cadastro.atualizar(conta)
@@ -136,8 +136,8 @@ class Servidor():
             :retorna uma string com '1' juntamente com os dados do novo saldo, e '0' para tansação 
             não realizado.
         '''
-        conta = self._cadastro.busca(codigo[1])
-        conta_1 = self._cadastro.busca(codigo[3])
+        conta = self._cadastro.buscaSecun(codigo[1])
+        conta_1 = self._cadastro.buscaSecun(codigo[3])
         if conta != None and conta_1!=None:
             if(conta.transferir(conta_1,float(codigo[2]))):
                 self._cadastro.atualizar(conta)
@@ -154,8 +154,7 @@ class Servidor():
             :retorna uma string com '1' juntamente com as transações do cliente, e '0' caso haja algum
             problema ao solicitar o historico da conta realizada.
         '''
-        #print('Entrei aqui')
-        conta = self._cadastro.busca(codigo[1])
+        conta = self._cadastro.buscaSecun(codigo[1])
         if conta != None:
             n_transacoes=len(conta.historico.transacoes)
             if(n_transacoes > 4):
@@ -220,6 +219,7 @@ class Servidor():
                 saida = self.transferencia(codigo)
                 con.send(saida.encode())
             elif(codigo[0] == 'historico'):
+                #print('Aqui00')
                 saida = self.historico(codigo)
                 con.send(saida.encode())
 

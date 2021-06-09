@@ -2,19 +2,22 @@
 
 import socket
 
+from mysql.connector.utils import print_buffer
+
 class plataforma_cliente():
     '''
         O objeto plataforma_cliente contém um cliente.
         Todos as informações do objeto são inicializados e deixados vazios até ser adicionado informações.
     '''
 
-    __slots__ = ['_nome','_sobrenome','_cpf','_saldo','_transacoes']
+    __slots__ = ['_nome','_sobrenome','_cpf','_saldo','_transacoes','_senha']
 
     def __init__(self):
         self._nome = ''
         self._sobrenome = ''
         self._cpf = ''
         self._saldo = ''
+        self._senha=''
         self._transacoes = []
 
     @property
@@ -23,6 +26,12 @@ class plataforma_cliente():
             retorna o sobrenome do cliente.
         '''
         return self._sobrenome
+    @property
+    def senha(self):
+        '''
+            retorna o sobrenome do cliente.
+        '''
+        return self._senha
 
     @property
     def cpf(self):
@@ -75,7 +84,7 @@ class plataforma_cliente():
 
         return saida
 
-    def cadastro(self,nome,sobrenome,cpf):
+    def cadastro(self,nome,sobrenome,cpf,senha):
         '''
             Para cadastrar uma pessoa é preciso se conectar ao servidor do banco.
 
@@ -85,7 +94,7 @@ class plataforma_cliente():
             :retorna bool. 
 
         '''
-        codigo = '0/'+nome+'/'+sobrenome+'/'+cpf
+        codigo = '0/'+nome+'/'+sobrenome+'/'+cpf+'/'+senha
         try:
             saida = self.conecxao_servidor(codigo)
         except:
@@ -97,7 +106,7 @@ class plataforma_cliente():
         return False
         
 
-    def login(self,cpf):
+    def login(self,cpf,senha):
         '''
             Para um cliente realizar operações em sua conta é preciso realizar o login.
 
@@ -106,17 +115,21 @@ class plataforma_cliente():
             :rises:: class return false: se não for possivel se conectar com o servidor do banco.
             :return: bool.
         '''
-        codigo = '1/'+cpf
+        codigo = '1/'+cpf+'/'+senha
         try:
             saida = self.conecxao_servidor(codigo)
+            
         except:
             return False
         saida_lst = saida.split('/')
+        
         if(saida_lst[0]=='1'):
+            print(saida_lst)
             self._nome = saida_lst[1]
             self._sobrenome = saida_lst[2]
             self._saldo = saida_lst[3]
             self._cpf = cpf
+            self._senha=senha
             return True
         return False
         

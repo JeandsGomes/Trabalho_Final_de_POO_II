@@ -107,7 +107,7 @@ class Banco():
 
     _total_contas = 0
 
-    __slots__ = ['_numero','_titular','_saldo','_limite','_historico']
+    __slots__ = ['_numero','_titular','_saldo','_limite','_historico','_senha']
     '''
         O objeto banco possui varias  contas.
         :Parametro numero: O paramentro é usado para informar o numero da conta do cliente.
@@ -123,11 +123,12 @@ class Banco():
         :iparam _limite: aqui armazenamos o limite.
         :tipo limite: float
     '''
-    def __init__(self,numero,cliente,saldo,limite):
+    def __init__(self,numero,cliente,saldo,limite,senha):
         self._numero = numero
         self._titular = cliente
         self._saldo = saldo
         self._limite = limite
+        self._senha=senha
         # como fazer o teste de historico
         self._historico = Historico()
         Banco._total_contas += 1
@@ -142,6 +143,16 @@ class Banco():
     @saldo.setter
     def saldo(self,saldo_interio):
         self._saldo = saldo_interio
+    @property
+    def senha(self):
+        '''
+            retorna o senha da conta.
+        '''
+        return self._senha
+
+    @senha.setter
+    def senha(self,senha):
+        self._senha = senha
 
     @property
     def historico(self):

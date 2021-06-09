@@ -12,8 +12,9 @@ from tela_login import Tela_login
 from tela_menu import Tela_menu
 from tela_saque import Tela_saque
 from tela_transfere2 import Tela_transfere
-from tela_cadastro import Tela_cadastro
+from tela_cadastro2 import Tela_cadastro2
 from tela_historico import Tela_historico
+from tela_senha import Tela_senha
 
 #from cadastro import Cadastro
 #from Banco import Banco,Cliente
@@ -39,6 +40,7 @@ class Ui_Main(QtWidgets.QWidget):
         self.stack4=QtWidgets.QMainWindow()
         self.stack5=QtWidgets.QMainWindow()
         self.stack6=QtWidgets.QMainWindow()
+        self.stack7=QtWidgets.QMainWindow()
 
         #cria objetos para as telas
         self.tela_login=Tela_login()
@@ -47,7 +49,7 @@ class Ui_Main(QtWidgets.QWidget):
         self.tela_menu=Tela_menu()
         self.tela_menu.setupUi(self.stack1)
 
-        self.tela_cadastro=Tela_cadastro()
+        self.tela_cadastro=Tela_cadastro2()
         self.tela_cadastro.setupUi(self.stack2)
         
         self.tela_deposito=Tela_deposito()
@@ -60,7 +62,10 @@ class Ui_Main(QtWidgets.QWidget):
         self.tela_saque.setupUi(self.stack5)
 
         self.tela_historico=Tela_historico()
-        self.tela_historico.setupUi(self.stack6)        
+        self.tela_historico.setupUi(self.stack6)
+
+        self.tela_senha=Tela_senha()
+        self.tela_senha.setupUi(self.stack7)        
 
         #add ao QtStack
         self.QtStack.addWidget(self.stack0)
@@ -70,6 +75,7 @@ class Ui_Main(QtWidgets.QWidget):
         self.QtStack.addWidget(self.stack4)
         self.QtStack.addWidget(self.stack5)
         self.QtStack.addWidget(self.stack6)
+        self.QtStack.addWidget(self.stack7)
         '''
         '''
 
@@ -90,8 +96,11 @@ class Main(QMainWindow,Ui_Main):
         self.cliente = plataforma_cliente()
 
         #funçoes dos botoes da tela,
-        self.tela_login.pushButton_login_login.clicked.connect(self.botaoLogin)
+        self.tela_login.pushButton_login_login.clicked.connect(self.abrirSenha)
         self.tela_login.pushButton_login_entrar_cadastrar.clicked.connect(self.abrirCadastro)
+
+        self.tela_senha.pushButton_login_login.clicked.connect(self.botaoLogin)
+
 
         self.tela_menu.pushButton_menu_entra_deposito.clicked.connect(self.abrirDeposito)
         self.tela_menu.pushButton_menu_entra_saque.clicked.connect(self.abrirSaque)
@@ -122,19 +131,27 @@ class Main(QMainWindow,Ui_Main):
         nome=self.tela_cadastro.lineEdit_cadastro_nome.text()
         sobrenome=self.tela_cadastro.lineEdit_cadastro_sobrenome.text()
         cpf=self.tela_cadastro.lineEdit_cadastro_CPF.text()
-        if not(nome=='' or sobrenome=='' or cpf==''):
-            if (self.cliente.cadastro(nome,sobrenome,cpf)):
-                QMessageBox.information(None, 'Cadastro', 'Cadastro realizado!')
-                self.tela_cadastro.lineEdit_cadastro_nome.setText('')
-                self.tela_cadastro.lineEdit_cadastro_sobrenome.setText('')
-                self.tela_cadastro.lineEdit_cadastro_CPF.setText('')
+        senha=self.tela_cadastro.lineEdit_cadastro_CPF_2.text()
+        senha2=self.tela_cadastro.lineEdit_cadastro_CPF_3.text()
+        if (senha == senha2):
+            if not(nome=='' or sobrenome=='' or cpf==''or senha==''):
+                if (self.cliente.cadastro(nome,sobrenome,cpf,senha)):
+                    QMessageBox.information(None, 'Cadastro', 'Cadastro realizado!')
+                    self.tela_cadastro.lineEdit_cadastro_nome.setText('')
+                    self.tela_cadastro.lineEdit_cadastro_sobrenome.setText('')
+                    self.tela_cadastro.lineEdit_cadastro_CPF.setText('')
+                    self.tela_cadastro.lineEdit_cadastro_CPF_2.setText('')
+                else:
+                    QMessageBox.information(None, 'Cadastro', 'cadastro não realizado.')
+                    self.tela_cadastro.lineEdit_cadastro_nome.setText('')
+                    self.tela_cadastro.lineEdit_cadastro_sobrenome.setText('')
+                    self.tela_cadastro.lineEdit_cadastro_CPF.setText('')
+                    self.tela_cadastro.lineEdit_cadastro_CPF_2.setText('')
+
             else:
-                QMessageBox.information(None, 'Cadastro', 'cadastro não realizado.')
-                self.tela_cadastro.lineEdit_cadastro_nome.setText('')
-                self.tela_cadastro.lineEdit_cadastro_sobrenome.setText('')
-                self.tela_cadastro.lineEdit_cadastro_CPF.setText('')
-        else:
-            QMessageBox.information(None, 'Cadastro', 'Todos os campos devem ser preenchidos!')  
+                QMessageBox.information(None, 'Cadastro', 'Todos os campos devem ser preenchidos!') 
+        else: 
+            QMessageBox.information(None, 'Cadastro', 'As senhas não são iguais.') 
 
         self.QtStack.setCurrentIndex(0)
 
@@ -145,14 +162,19 @@ class Main(QMainWindow,Ui_Main):
             :rise: exibe uma tela informando quando o login não é realizado.
         '''
         cpf=self.tela_login.lineEdit_login_cpf.text()
+        self.abrirSenha()
+        senha=self.tela_senha.lineEdit_login_cpf.text()
         #pes=self.cad.busca(cpf)
-        if cpf != '':
-            if (self.cliente.login(cpf)):
-                self.tela_login.lineEdit_login_cpf.setText('')
+        if cpf != ''and senha != '':
+            print('login')
+            if (self.cliente.login(cpf,senha)):
                 self.botaoMenu()
-            else:
-                QMessageBox.information(None, 'Login', 'CPF não cadastrado!') 
                 self.tela_login.lineEdit_login_cpf.setText('')
+                self.tela_senha.lineEdit_login_cpf.setText('')
+            else:
+                QMessageBox.information(None, 'Login', 'CPF não cadastrado! ou Senha incorreta') 
+                self.tela_login.lineEdit_login_cpf.setText('')
+                self.tela_senha.lineEdit_login_cpf.setText('')
                 self.abrirLogin() 
         else:
             self.abrirLogin() 
@@ -243,7 +265,8 @@ class Main(QMainWindow,Ui_Main):
             Para acessar o menu é preciso estar na lista de contas do banco.
             :rise: exibe uma tela informando quando o cpf não é encontrado.
         '''
-        if self.cliente.login(self.cliente.cpf):
+        print('entrei menu')
+        if self.cliente.login(self.cliente.cpf,self.cliente.senha):
             self.abrirMenu()
             self.tela_menu.lineEdit_menu_nome_sobrenome_cliente.setText(self.cliente.nome)
             self.tela_menu.lineEdit_menu_nome_sobrenome_cliente.setEnabled(False)
@@ -300,6 +323,11 @@ class Main(QMainWindow,Ui_Main):
             abre a tela de Historico
         '''
         self.QtStack.setCurrentIndex(6)
+    def abrirSenha(self):
+        '''
+            abre a tela de senha
+        '''
+        self.QtStack.setCurrentIndex(7)
         
 
 

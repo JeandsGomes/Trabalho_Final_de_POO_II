@@ -17,7 +17,7 @@ class Cadastro:
         try:
             self._lista=[]
             #self._conta_cache = Banco()
-            conexao = mysql.connect(host = 'localhost',db='test_5',user='root',passwd='301997')
+            conexao = mysql.connect(host = 'localhost',db='test_5',user='root')
             cursor = conexao.cursor()
 
             sql = """CREATE TABLE IF NOT EXISTS usuarios(id INTEGER AUTO_INCREMENT PRIMARY KEY UNIQUE, 
@@ -38,7 +38,7 @@ class Cadastro:
         try:
             if(True):
 
-                conexao = mysql.connect(host = 'localhost',db='test_5',user='root',passwd='301997')
+                conexao = mysql.connect(host = 'localhost',db='test_5',user='root')
                 cursor = conexao.cursor()
 
 
@@ -72,7 +72,7 @@ class Cadastro:
     def sqlite_read(self,cpf,senha):
         try:
             if(True):
-                conexao = mysql.connect(host = 'localhost',db='test_5',user='root',passwd='301997')
+                conexao = mysql.connect(host = 'localhost',db='test_5',user='root')
                 cursor = conexao.cursor()
 
                 cursor.execute("SELECT * FROM usuarios WHERE banco_titular_cpf=%s AND banco_senha= MD5('%s')" %(cpf,senha))
@@ -104,7 +104,7 @@ class Cadastro:
     def sqlite_readSec(self,cpf):
         try:
             if(True):
-                conexao = mysql.connect(host = 'localhost',db='test_5',user='root',passwd='301997')
+                conexao = mysql.connect(host = 'localhost',db='test_5',user='root')
                 cursor = conexao.cursor()
                 cursor.execute('SELECT * FROM usuarios WHERE banco_titular_cpf= %s'%cpf)
                 usuario = cursor.fetchall()
@@ -136,7 +136,7 @@ class Cadastro:
         try:    
             if(True):
 
-                conexao = mysql.connect(host = 'localhost',db='test_5',user='root',passwd='301997')
+                conexao = mysql.connect(host = 'localhost',db='test_5',user='root')
                 cursor = conexao.cursor()
 
                 pega=banco_atualizado._historico.transacoes

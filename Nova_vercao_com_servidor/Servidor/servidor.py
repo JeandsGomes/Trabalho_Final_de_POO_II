@@ -6,6 +6,67 @@ from Banco import Cliente
 from Banco import Historico
 from Banco import Banco
 
+import threading
+
+class ClientThread(threading.Thread):
+
+    def __init__(self,clientAddress,con,sinc):
+        threading.Thread.__init__(self)
+        self.con = con
+        self.sinc = sinc
+        self._servidor = Servidor()
+        print("Nova conexao: ",clientAddress)
+
+    def run(self):
+        self.sinc.acquire()
+        self._codigo=self.operacao_da_thread()
+        self.sinc.release()
+        print("Finalizando")
+        
+
+    def operacao_da_thread(self):
+
+#operacoes do servidor
+            print('-aguardando solicitacao...')
+            recebe = self.con.recv(1024) #define que os pacotes recebidos são de ate 1024 bytes
+            
+            print('-solicitacao recebida...')
+
+            #pre-processamento do codigo
+            codigo = self._servidor.pre_processamento(recebe.decode())
+            print(codigo)
+        
+            if(codigo[0] == 'cadastra'):
+                saida = self._servidor.cadastrar(codigo)
+                
+            elif(codigo[0] == 'login'):
+                saida = self._servidor.login(codigo)
+                
+            elif(codigo[0] == 'deposito'):
+                saida = self._servidor.deposito(codigo)
+                
+            elif(codigo[0] == 'saque'):
+                saida = self._servidor.saque(codigo)
+                
+            elif(codigo[0] ==  'transferencia'):
+                saida = self._servidor.transferencia(codigo)
+                
+            elif(codigo[0] == 'historico'):
+                #print('Aqui00')
+                saida = self._servidor.historico(codigo)
+                
+            self.con.send(saida.encode())
+            print('-solicitacao recebida...')
+            print('-{} feito por conta {}'.format(codigo[0],codigo[1]))
+            print('')
+            self._servidor.mostrar_todas_contas()
+            print('')
+
+    @property
+    def codigo(self):
+        return self._codigo
+
+
 class Servidor():
     '''
         O objeto da class Servidor representar a interface de conecção do servido com o cliente.
@@ -188,47 +249,21 @@ class Servidor():
         serv_socket.listen(10) #define o limite de conexões
 
 
+        '''
+        serv_socket,
+        
+        '''
+
+        sinc = threading.Lock()
+
         while(True):
             print('-aguardando conexao...')
-            con, cliente = serv_socket.accept() #servidor aguardando conexão
+            con, clientAddress = serv_socket.accept() #servidor aguardando conexão
             print('-coneccao realizada')
-            
-            #operacoes do servidor
-            print('-aguardando solicitacao...')
-            recebe = con.recv(1024) #define que os pacotes recebidos são de ate 1024 bytes
-            
-            print('-solicitacao recebida...')
 
-            #pre-processamento do codigo
-            codigo = self.pre_processamento(recebe.decode())
-            print(codigo)
-        
-            if(codigo[0] == 'cadastra'):
-                saida = self.cadastrar(codigo)
-                con.send(saida.encode())
-            elif(codigo[0] == 'login'):
-                saida = self.login(codigo)
-                con.send(saida.encode())
-            elif(codigo[0] == 'deposito'):
-                saida = self.deposito(codigo)
-                con.send(saida.encode())
-            elif(codigo[0] == 'saque'):
-                saida = self.saque(codigo)
-                con.send(saida.encode())
-            elif(codigo[0] ==  'transferencia'):
-                saida = self.transferencia(codigo)
-                con.send(saida.encode())
-            elif(codigo[0] == 'historico'):
-                #print('Aqui00')
-                saida = self.historico(codigo)
-                con.send(saida.encode())
-
-            print('-solicitacao recebida...')
-            print('-{} feito por conta {}'.format(codigo[0],codigo[1]))
-            print('')
-            self.mostrar_todas_contas()
-            print('')
-
+            newthread = ClientThread(clientAddress, con, sinc)
+            newthread.start()
+            newthread.join()
             #print('codigo recebido: {}'.format(codigo))
 
         serv_socket.close()
